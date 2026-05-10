@@ -12,7 +12,7 @@ const links = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur">
-      <div className="container-page flex h-20 items-center justify-between">
+      <div className="container-page flex h-24 items-center justify-between">
         <Link to="/" aria-label="Drukveratika sākums">
           <Logo />
         </Link>

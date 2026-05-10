@@ -5,9 +5,10 @@ export function Logo() {
     <img
       src={logoImg}
       alt="Drukveratika"
-      width={180}
-      height={48}
-      className="h-10 w-auto object-contain"
+      width={260}
+      height={72}
+      className="h-14 md:h-16 w-auto object-contain"
     />
   );
 }
+

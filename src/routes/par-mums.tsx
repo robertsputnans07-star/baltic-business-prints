@@ -28,10 +28,15 @@ function AboutPage() {
             Korporatīvas dāvanas Baltijas uzņēmumiem
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            <strong>Drukveratika</strong> ir uzņēmums, kas Baltijas uzņēmumiem nodrošina
-            korporatīvās dāvanas klientiem. Mēs izstrādājam un sagatavojam korporatīvās
-            dāvanas, kuras tiešām dāvina klientam pievienoto vērtību — apdrukātus biroja
-            piederumus darbiniekiem un dāvanas izstādēm un pasākumiem.
+            <strong>Drukveratika</strong> specializējas kvalitatīvu korporatīvo dāvanu
+            izstrādē un sagatavošanā Baltijas uzņēmumiem. Mēs nodrošinām pilnu servisu —
+            no dizaina izstrādes un apdrukas līdz gatavam risinājumam izstādēm,
+            pasākumiem un ikdienas reprezentācijai.
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Mūsu mērķis ir radīt korporatīvās dāvanas, kas stiprina uzņēmuma tēlu,
+            atstāj profesionālu iespaidu un palīdz veidot spēcīgākas attiecības ar
+            klientiem, partneriem un darbiniekiem.
           </p>
         </div>
       </section>
