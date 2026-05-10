@@ -14,18 +14,15 @@ export const Route = createFileRoute("/atsauksmes")({
 const reviews = [
   {
     text: "Drukveratika sagatavoja izcilas dāvanas mūsu klientiem izstādei Rīgā. Kvalitāte un piegāde laikā — bez nevienas piezīmes.",
-    name: "Anna Bērziņa",
-    role: "Mārketinga vadītāja",
+    name: "SIA C****",
   },
   {
     text: "Apdrukātās krūzes un blociņi ar mūsu logo ir kļuvušas par neatņemamu sastāvdaļu darbinieku ikdienā. Iesakām!",
-    name: "Jānis Liepiņš",
-    role: "HR partneris",
+    name: "SIA K****",
   },
   {
     text: "Operatīva komunikācija un elastīga pieeja. Saņēmām individuālu piedāvājumu, kas precīzi atbilda mūsu budžetam.",
-    name: "Mārtiņš Kalniņš",
-    role: "Direktors",
+    name: "SIA A****",
   },
 ];
 
@@ -47,7 +44,6 @@ function ReviewsPage() {
             <blockquote className="text-foreground/90 flex-1">"{r.text}"</blockquote>
             <figcaption className="mt-6 pt-4 border-t border-border/60">
               <div className="font-semibold">{r.name}</div>
-              <div className="text-sm text-muted-foreground">{r.role}</div>
             </figcaption>
           </figure>
         ))}

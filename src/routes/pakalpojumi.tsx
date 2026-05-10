@@ -1,4 +1,3 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { Gift, Pencil, Package, Truck } from "lucide-react";
 
 export const Route = createFileRoute("/pakalpojumi")({
@@ -63,13 +62,6 @@ function ServicesPage() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-2xl bg-[color:var(--primary-soft)] p-8 text-center">
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Mājaslapā nav cenu un produktu kataloga — mēs prezentējam to, ko darām.
-            Visu piedāvājumu un cenas sūtām atsevišķi, klientam izdevīgāk.
-          </p>
-          <Link to="/kontakti" className="btn-primary mt-6">Pieprasīt piedāvājumu</Link>
-        </div>
       </section>
     </>
   );
