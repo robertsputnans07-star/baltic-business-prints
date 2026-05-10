@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Handshake, Wallet } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
 import pensImg from "@/assets/product-pens.jpg";
@@ -92,7 +92,7 @@ function Index() {
               sūtām atsevišķi.
             </p>
           </div>
-          <a href="/kontakti" className="btn-primary whitespace-nowrap">Sazināties ar mums</a>
+          <Link to="/kontakti" className="btn-primary whitespace-nowrap">Sazināties ar mums</Link>
         </div>
       </section>
     </>
