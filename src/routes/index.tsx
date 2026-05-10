@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Handshake, Wallet } from "lucide-react";
+import { Handshake, Wallet } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
 import pensImg from "@/assets/product-pens.jpg";
 import bagImg from "@/assets/product-bag.jpg";
