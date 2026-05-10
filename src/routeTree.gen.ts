@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ParMumsRouteImport } from './routes/par-mums'
+import { Route as PakalpojumiRouteImport } from './routes/pakalpojumi'
+import { Route as KontaktiRouteImport } from './routes/kontakti'
+import { Route as AtsauksmesRouteImport } from './routes/atsauksmes'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ParMumsRoute = ParMumsRouteImport.update({
+  id: '/par-mums',
+  path: '/par-mums',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PakalpojumiRoute = PakalpojumiRouteImport.update({
+  id: '/pakalpojumi',
+  path: '/pakalpojumi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktiRoute = KontaktiRouteImport.update({
+  id: '/kontakti',
+  path: '/kontakti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtsauksmesRoute = AtsauksmesRouteImport.update({
+  id: '/atsauksmes',
+  path: '/atsauksmes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,78 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atsauksmes': typeof AtsauksmesRoute
+  '/kontakti': typeof KontaktiRoute
+  '/pakalpojumi': typeof PakalpojumiRoute
+  '/par-mums': typeof ParMumsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atsauksmes': typeof AtsauksmesRoute
+  '/kontakti': typeof KontaktiRoute
+  '/pakalpojumi': typeof PakalpojumiRoute
+  '/par-mums': typeof ParMumsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atsauksmes': typeof AtsauksmesRoute
+  '/kontakti': typeof KontaktiRoute
+  '/pakalpojumi': typeof PakalpojumiRoute
+  '/par-mums': typeof ParMumsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
+  id:
+    | '__root__'
+    | '/'
+    | '/atsauksmes'
+    | '/kontakti'
+    | '/pakalpojumi'
+    | '/par-mums'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtsauksmesRoute: typeof AtsauksmesRoute
+  KontaktiRoute: typeof KontaktiRoute
+  PakalpojumiRoute: typeof PakalpojumiRoute
+  ParMumsRoute: typeof ParMumsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/par-mums': {
+      id: '/par-mums'
+      path: '/par-mums'
+      fullPath: '/par-mums'
+      preLoaderRoute: typeof ParMumsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pakalpojumi': {
+      id: '/pakalpojumi'
+      path: '/pakalpojumi'
+      fullPath: '/pakalpojumi'
+      preLoaderRoute: typeof PakalpojumiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakti': {
+      id: '/kontakti'
+      path: '/kontakti'
+      fullPath: '/kontakti'
+      preLoaderRoute: typeof KontaktiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atsauksmes': {
+      id: '/atsauksmes'
+      path: '/atsauksmes'
+      fullPath: '/atsauksmes'
+      preLoaderRoute: typeof AtsauksmesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +127,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtsauksmesRoute: AtsauksmesRoute,
+  KontaktiRoute: KontaktiRoute,
+  PakalpojumiRoute: PakalpojumiRoute,
+  ParMumsRoute: ParMumsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
