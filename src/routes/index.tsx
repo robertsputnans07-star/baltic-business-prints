@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Handshake, Wallet } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
 import pensImg from "@/assets/product-pens.jpg";
@@ -31,18 +31,14 @@ function Index() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Apdrukātas dāvanas uzņēmumiem,{" "}
-              <span style={{ color: "var(--primary)" }}>kas strādā jūsu labā.</span>
+              Korporatīvo dāvanu risinājumi uzņēmumiem,{" "}
+              <span style={{ color: "var(--primary)" }}>kas palīdz izcelties.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-md">
               Kvalitatīvas dāvanas{" "}
               <span style={{ color: "var(--primary)" }}>ar Jūsu logo</span>, kas stiprina
               zīmolu, iepriecina klientus un motivē darbiniekus.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/kontakti" className="btn-primary">Sazināties</Link>
-              <Link to="/pakalpojumi" className="btn-outline">Skatīt piemērus</Link>
-            </div>
             <div className="mt-10 flex items-start gap-3 text-sm text-muted-foreground max-w-sm">
               <Handshake className="text-[color:var(--primary)] shrink-0 mt-0.5" size={28} />
               <span>Izdevīgi ilgtermiņa sadarbības risinājumi uzņēmumiem.</span>
@@ -73,9 +69,6 @@ function Index() {
               <div className="relative aspect-square overflow-hidden rounded-xl bg-[color:var(--muted)]">
                 <img src={p.img} alt={p.title} width={640} height={640} loading="lazy"
                   className="h-full w-full object-cover" />
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] text-xs font-semibold px-3 py-1.5 shadow-md whitespace-nowrap">
-                  Jūsu logo
-                </span>
               </div>
             </div>
           ))}
@@ -96,10 +89,10 @@ function Index() {
             <p className="mt-2 text-muted-foreground max-w-2xl">
               Cenas atkarīgas no apjoma un prasībām. Piedāvājam izdevīgus nosacījumus
               un elastīgus risinājumus katram uzņēmumam. Visu piedāvājumu un cenas
-              sūtām atsevišķi — klientam izdevīgāk.
+              sūtām atsevišķi.
             </p>
           </div>
-          <Link to="/kontakti" className="btn-primary whitespace-nowrap">Sazināties ar mums</Link>
+          <a href="/kontakti" className="btn-primary whitespace-nowrap">Sazināties ar mums</a>
         </div>
       </section>
     </>
