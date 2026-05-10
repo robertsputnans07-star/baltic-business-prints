@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { Gift, Pencil, Package, Truck } from "lucide-react";
 
 export const Route = createFileRoute("/pakalpojumi")({
