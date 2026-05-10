@@ -79,7 +79,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Drukveratika" },
       { property: "og:title", content: "Drukveratika — Apdrukātas dāvanas uzņēmumiem" },
       { property: "og:description", content: "Korporatīvas dāvanas un apdrukāti biroja piederumi Baltijas uzņēmumiem ar Jūsu logo." },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
