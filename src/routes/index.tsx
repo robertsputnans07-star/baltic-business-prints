@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Handshake, Wallet } from "lucide-react";
+import { Handshake, Wallet } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
 import pensImg from "@/assets/product-pens.jpg";
 import bagImg from "@/assets/product-bag.jpg";
@@ -65,20 +65,19 @@ function Index() {
         <h2 className="text-3xl md:text-4xl text-center mb-10">Populārākie produktu piemēri</h2>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
-            <Link
+            <div
               key={p.title}
-              to="/pakalpojumi"
-              className="group relative block rounded-2xl bg-card border border-border/60 p-5 transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-2xl bg-card border border-border/60 p-5"
             >
-              <h3 className="text-lg font-semibold mb-3">{p.title}</h3>
-              <div className="aspect-square overflow-hidden rounded-xl bg-[color:var(--muted)]">
+              <h3 className="text-lg font-semibold mb-3 text-center">{p.title}</h3>
+              <div className="relative aspect-square overflow-hidden rounded-xl bg-[color:var(--muted)]">
                 <img src={p.img} alt={p.title} width={640} height={640} loading="lazy"
                   className="h-full w-full object-cover" />
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] text-xs font-semibold px-3 py-1.5 shadow-md whitespace-nowrap">
+                  Jūsu logo
+                </span>
               </div>
-              <span className="absolute bottom-7 right-7 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] transition-transform group-hover:translate-x-1">
-                <ArrowRight size={16} />
-              </span>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
