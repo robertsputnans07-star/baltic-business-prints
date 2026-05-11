@@ -31,7 +31,7 @@ function Index() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Korporatīvo dāvanu risinājumi,{" "}
+              Korporatīvo dāvanu risinājumi uzņēmumiem,{" "}
               <span style={{ color: "var(--primary)" }}>kas palīdz izcelties.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-md">
