@@ -50,25 +50,28 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="relative h-[520px] md:h-[600px] w-full">
-            {/* Scattered exhibition logos */}
-            <img src={expoMedbaltica} alt="Medbaltica '26" className="absolute top-0 left-0 w-36 md:w-44 rounded-xl shadow-lg rotate-[-8deg] border-4 border-card" loading="lazy" />
-            <img src={expoRigacomm} alt="Riga Comm 2026" className="absolute top-2 right-4 w-32 md:w-40 rounded-xl shadow-lg rotate-[7deg] border-4 border-card" loading="lazy" />
-            <img src={expoFurniture} alt="Riga Furniture & Interior 2026" className="absolute top-[28%] left-[-10px] w-32 md:w-40 rounded-xl shadow-lg rotate-[5deg] border-4 border-card" loading="lazy" />
-            <img src={expoTechindustry} alt="Tech Industry 2026" className="absolute top-[30%] right-0 w-32 md:w-40 rounded-xl shadow-lg rotate-[-6deg] border-4 border-card" loading="lazy" />
-            <img src={expoBalttour} alt="Balttour 2027" className="absolute bottom-[28%] left-[35%] w-32 md:w-40 rounded-xl shadow-lg rotate-[-4deg] border-4 border-card hidden md:block" loading="lazy" />
-            <img src={expoOutdoor} alt="Outdoor Riga 2027" className="absolute bottom-[6%] left-2 w-32 md:w-40 rounded-xl shadow-lg rotate-[6deg] border-4 border-card" loading="lazy" />
-            <img src={expoMaja} alt="Māja 2027" className="absolute bottom-0 left-[40%] w-28 md:w-36 rounded-xl shadow-lg rotate-[-7deg] border-4 border-card" loading="lazy" />
-            <img src={expoAuto} alt="Auto '27" className="absolute bottom-[8%] right-2 w-32 md:w-40 rounded-xl shadow-lg rotate-[8deg] border-4 border-card" loading="lazy" />
-            <img src={expoDarzs} alt="Dārzs un dzīvesstils 2027" className="absolute top-[55%] right-[38%] w-28 md:w-32 rounded-xl shadow-lg rotate-[10deg] border-4 border-card hidden md:block" loading="lazy" />
+          <div className="w-full">
+            <div className="grid grid-cols-3 grid-rows-4 gap-3 md:gap-4">
+              <img src={expoMedbaltica} alt="Medbaltica '26" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-3deg] border-2 border-card" loading="lazy" />
+              <img src={expoRigacomm} alt="Riga Comm 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[2deg] border-2 border-card" loading="lazy" />
+              <img src={expoFurniture} alt="Riga Furniture & Interior 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
 
-            {/* Centered caption */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 max-w-[220px] text-center">
-              <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl px-5 py-4 shadow-xl">
-                <p className="text-sm md:text-base font-semibold leading-snug">
-                  Izstādes, kurās jau esam palīdzējuši uzņēmumiem
-                </p>
+              <img src={expoTechindustry} alt="Tech Industry 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-2deg] border-2 border-card" loading="lazy" />
+              <div className="row-span-2 flex items-center justify-center">
+                <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl px-4 py-5 shadow-xl text-center w-full h-full flex items-center justify-center">
+                  <p className="text-sm md:text-base font-semibold leading-snug">
+                    Izstādes, kurās jau esam palīdzējuši uzņēmumiem
+                  </p>
+                </div>
               </div>
+              <img src={expoBalttour} alt="Balttour 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
+
+              <img src={expoOutdoor} alt="Outdoor Riga 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[2deg] border-2 border-card" loading="lazy" />
+              <img src={expoAuto} alt="Auto '27" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-3deg] border-2 border-card" loading="lazy" />
+
+              <img src={expoMaja} alt="Māja 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-2deg] border-2 border-card" loading="lazy" />
+              <img src={expoDarzs} alt="Dārzs un dzīvesstils 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
+              <div />
             </div>
           </div>
         </div>
