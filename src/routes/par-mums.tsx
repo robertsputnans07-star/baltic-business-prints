@@ -1,10 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Lightbulb, Pencil, Package, Truck } from "lucide-react";
-import heroProducts from "@/assets/hero-products.jpg";
-import productPens from "@/assets/product-pens.jpg";
-import productBag from "@/assets/product-bag.jpg";
-import productBottles from "@/assets/product-bottles.jpg";
-import productOther from "@/assets/product-other.jpg";
+import expoMedbaltica from "@/assets/expo-medbaltica.jpg";
+import expoRigacomm from "@/assets/expo-rigacomm.jpg";
+import expoFurniture from "@/assets/expo-furniture.jpg";
+import expoTechindustry from "@/assets/expo-techindustry.jpg";
+import expoBalttour from "@/assets/expo-balttour.jpg";
+import expoOutdoor from "@/assets/expo-outdoor.jpg";
+import expoMaja from "@/assets/expo-maja.jpg";
+import expoAuto from "@/assets/expo-auto.jpg";
+import expoDarzs from "@/assets/expo-darzs.jpg";
 
 export const Route = createFileRoute("/par-mums")({
   head: () => ({
@@ -46,38 +50,17 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="relative h-[460px] md:h-[520px] w-full">
-            {/* Scattered images */}
-            <img
-              src={heroProducts}
-              alt="Apdrukāti produkti"
-              className="absolute top-0 left-2 w-40 md:w-48 h-32 md:h-36 object-cover rounded-2xl shadow-lg rotate-[-6deg] border-4 border-card"
-              loading="lazy"
-            />
-            <img
-              src={productPens}
-              alt="Apdrukātas pildspalvas"
-              className="absolute top-4 right-2 w-36 md:w-44 h-28 md:h-32 object-cover rounded-2xl shadow-lg rotate-[5deg] border-4 border-card"
-              loading="lazy"
-            />
-            <img
-              src={productBag}
-              alt="Apdrukāta soma"
-              className="absolute bottom-6 left-0 w-36 md:w-40 h-32 md:h-36 object-cover rounded-2xl shadow-lg rotate-[-4deg] border-4 border-card"
-              loading="lazy"
-            />
-            <img
-              src={productBottles}
-              alt="Apdrukātas pudeles"
-              className="absolute bottom-0 right-6 w-36 md:w-44 h-28 md:h-32 object-cover rounded-2xl shadow-lg rotate-[6deg] border-4 border-card"
-              loading="lazy"
-            />
-            <img
-              src={productOther}
-              alt="Citi produkti"
-              className="absolute bottom-20 right-0 w-28 md:w-32 h-24 md:h-28 object-cover rounded-2xl shadow-lg rotate-[10deg] border-4 border-card hidden md:block"
-              loading="lazy"
-            />
+          <div className="relative h-[520px] md:h-[600px] w-full">
+            {/* Scattered exhibition logos */}
+            <img src={expoMedbaltica} alt="Medbaltica '26" className="absolute top-0 left-0 w-36 md:w-44 rounded-xl shadow-lg rotate-[-8deg] border-4 border-card" loading="lazy" />
+            <img src={expoRigacomm} alt="Riga Comm 2026" className="absolute top-2 right-4 w-32 md:w-40 rounded-xl shadow-lg rotate-[7deg] border-4 border-card" loading="lazy" />
+            <img src={expoFurniture} alt="Riga Furniture & Interior 2026" className="absolute top-[28%] left-[-10px] w-32 md:w-40 rounded-xl shadow-lg rotate-[5deg] border-4 border-card" loading="lazy" />
+            <img src={expoTechindustry} alt="Tech Industry 2026" className="absolute top-[30%] right-0 w-32 md:w-40 rounded-xl shadow-lg rotate-[-6deg] border-4 border-card" loading="lazy" />
+            <img src={expoBalttour} alt="Balttour 2027" className="absolute bottom-[28%] left-[35%] w-32 md:w-40 rounded-xl shadow-lg rotate-[-4deg] border-4 border-card hidden md:block" loading="lazy" />
+            <img src={expoOutdoor} alt="Outdoor Riga 2027" className="absolute bottom-[6%] left-2 w-32 md:w-40 rounded-xl shadow-lg rotate-[6deg] border-4 border-card" loading="lazy" />
+            <img src={expoMaja} alt="Māja 2027" className="absolute bottom-0 left-[40%] w-28 md:w-36 rounded-xl shadow-lg rotate-[-7deg] border-4 border-card" loading="lazy" />
+            <img src={expoAuto} alt="Auto '27" className="absolute bottom-[8%] right-2 w-32 md:w-40 rounded-xl shadow-lg rotate-[8deg] border-4 border-card" loading="lazy" />
+            <img src={expoDarzs} alt="Dārzs un dzīvesstils 2027" className="absolute top-[55%] right-[38%] w-28 md:w-32 rounded-xl shadow-lg rotate-[10deg] border-4 border-card hidden md:block" loading="lazy" />
 
             {/* Centered caption */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 max-w-[220px] text-center">
