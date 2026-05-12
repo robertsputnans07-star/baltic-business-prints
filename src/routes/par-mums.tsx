@@ -51,27 +51,47 @@ function AboutPage() {
           </div>
 
           <div className="w-full">
-            <div className="grid grid-cols-3 grid-rows-4 gap-3 md:gap-4">
-              <img src={expoMedbaltica} alt="Medbaltica '26" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-3deg] border-2 border-card" loading="lazy" />
-              <img src={expoRigacomm} alt="Riga Comm 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[2deg] border-2 border-card" loading="lazy" />
-              <img src={expoFurniture} alt="Riga Furniture & Interior 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
-
-              <img src={expoTechindustry} alt="Tech Industry 2026" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-2deg] border-2 border-card" loading="lazy" />
-              <div className="row-span-2 flex items-center justify-center">
-                <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl px-4 py-5 shadow-xl text-center w-full h-full flex items-center justify-center">
-                  <p className="text-sm md:text-base font-semibold leading-snug">
+            <div className="relative mx-auto w-full max-w-[520px] aspect-square">
+              {/* Center caption */}
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[42%] aspect-[5/4]">
+                <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl shadow-xl w-full h-full flex items-center justify-center px-3 text-center">
+                  <p className="text-xs md:text-sm font-semibold leading-snug">
                     Izstādes, kurās jau esam palīdzējuši uzņēmumiem
                   </p>
                 </div>
               </div>
-              <img src={expoBalttour} alt="Balttour 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
 
-              <img src={expoOutdoor} alt="Outdoor Riga 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[2deg] border-2 border-card" loading="lazy" />
-              <img src={expoAuto} alt="Auto '27" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-3deg] border-2 border-card" loading="lazy" />
-
-              <img src={expoMaja} alt="Māja 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[-2deg] border-2 border-card" loading="lazy" />
-              <img src={expoDarzs} alt="Dārzs un dzīvesstils 2027" className="w-full h-24 md:h-28 object-cover rounded-xl shadow-md rotate-[3deg] border-2 border-card" loading="lazy" />
-              <div />
+              {/* 9 images scattered in a circle around the center */}
+              {[
+                { src: expoMedbaltica, alt: "Medbaltica '26", angle: -90, rot: -4 },
+                { src: expoRigacomm, alt: "Riga Comm 2026", angle: -50, rot: 5 },
+                { src: expoFurniture, alt: "Riga Furniture & Interior 2026", angle: -10, rot: -3 },
+                { src: expoTechindustry, alt: "Tech Industry 2026", angle: 30, rot: 4 },
+                { src: expoBalttour, alt: "Balttour 2027", angle: 70, rot: -5 },
+                { src: expoOutdoor, alt: "Outdoor Riga 2027", angle: 110, rot: 3 },
+                { src: expoMaja, alt: "Māja 2027", angle: 150, rot: -4 },
+                { src: expoAuto, alt: "Auto '27", angle: 190, rot: 5 },
+                { src: expoDarzs, alt: "Dārzs un dzīvesstils 2027", angle: 230, rot: -3 },
+              ].map((item, i) => {
+                const rad = (item.angle * Math.PI) / 180;
+                const radius = 38; // % of container
+                const x = 50 + radius * Math.cos(rad);
+                const y = 50 + radius * Math.sin(rad);
+                return (
+                  <img
+                    key={i}
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    className="absolute w-[26%] aspect-[4/3] object-cover rounded-xl shadow-lg border-2 border-card"
+                    style={{
+                      left: `${x}%`,
+                      top: `${y}%`,
+                      transform: `translate(-50%, -50%) rotate(${item.rot}deg)`,
+                    }}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
