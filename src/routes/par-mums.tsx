@@ -51,9 +51,9 @@ function AboutPage() {
           </div>
 
           <div className="w-full">
-            <div className="relative mx-auto w-full max-w-[560px] aspect-square">
+            <div className="relative mx-auto w-full max-w-[480px] aspect-square">
               {/* Center caption — text fills the square */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[34%] aspect-square">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[36%] aspect-square">
                 <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl shadow-xl w-full h-full flex items-center justify-center px-3 py-3 text-center">
                   <p className="text-base md:text-xl font-bold leading-tight">
                     Izstādes, kurās jau esam palīdzējuši uzņēmumiem
@@ -63,15 +63,15 @@ function AboutPage() {
 
               {/* Scattered images, tight around the center without overlapping */}
               {[
-                { src: expoMedbaltica, alt: "Medbaltica '26",                x: 4,  y: 2,  rot: -5 },
-                { src: expoRigacomm,   alt: "Riga Comm 2026",                x: 38, y: 0,  rot: 4 },
-                { src: expoFurniture,  alt: "Riga Furniture & Interior 2026", x: 72, y: 2,  rot: -3 },
-                { src: expoTechindustry, alt: "Tech Industry 2026",          x: 2,  y: 28, rot: 5 },
-                { src: expoBalttour,   alt: "Balttour 2027",                 x: 74, y: 26, rot: -5 },
-                { src: expoOutdoor,    alt: "Outdoor Riga 2027",             x: 2,  y: 56, rot: 4 },
-                { src: expoDarzs,      alt: "Dārzs un dzīvesstils 2027",     x: 74, y: 60, rot: -4 },
-                { src: expoMaja,       alt: "Māja 2027",                     x: 20, y: 80, rot: 5 },
-                { src: expoAuto,       alt: "Auto '27",                      x: 52, y: 80, rot: -6 },
+                { src: expoMedbaltica, alt: "Medbaltica '26",                x: 8,  y: 6,  rot: -5 },
+                { src: expoRigacomm,   alt: "Riga Comm 2026",                x: 39, y: 2,  rot: 4 },
+                { src: expoFurniture,  alt: "Riga Furniture & Interior 2026", x: 70, y: 6,  rot: -3 },
+                { src: expoTechindustry, alt: "Tech Industry 2026",          x: 4,  y: 39, rot: 5 },
+                { src: expoBalttour,   alt: "Balttour 2027",                 x: 74, y: 39, rot: -5 },
+                { src: expoOutdoor,    alt: "Outdoor Riga 2027",             x: 8,  y: 72, rot: 4 },
+                { src: expoDarzs,      alt: "Dārzs un dzīvesstils 2027",     x: 70, y: 72, rot: -4 },
+                { src: expoMaja,       alt: "Māja 2027",                     x: 22, y: 76, rot: 5 },
+                { src: expoAuto,       alt: "Auto '27",                      x: 52, y: 76, rot: -6 },
               ].map((item, i) => (
                 <img
                   key={i}
