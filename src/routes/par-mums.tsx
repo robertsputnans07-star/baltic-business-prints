@@ -52,33 +52,33 @@ function AboutPage() {
 
           <div className="w-full">
             <div className="relative mx-auto w-full max-w-[560px] aspect-square">
-              {/* Center caption — text fills the square */}
+              {/* Center caption — smaller box, larger text filling it */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[34%] aspect-square">
-                <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl shadow-xl w-full h-full flex items-center justify-center px-3 py-3 text-center">
-                  <p className="text-base md:text-xl font-bold leading-tight">
+                <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl shadow-xl w-full h-full flex items-center justify-center px-2 py-2 text-center">
+                  <p className="text-[13px] md:text-[15px] font-bold leading-tight">
                     Izstādes, kurās jau esam palīdzējuši uzņēmumiem
                   </p>
                 </div>
               </div>
 
-              {/* Scattered images, tight around the center without overlapping */}
+              {/* Scattered images — irregular positions, not a strict circle */}
               {[
-                { src: expoMedbaltica, alt: "Medbaltica '26",                x: 4,  y: 2,  rot: -5 },
-                { src: expoRigacomm,   alt: "Riga Comm 2026",                x: 38, y: 0,  rot: 4 },
-                { src: expoFurniture,  alt: "Riga Furniture & Interior 2026", x: 72, y: 2,  rot: -3 },
-                { src: expoTechindustry, alt: "Tech Industry 2026",          x: 2,  y: 28, rot: 5 },
-                { src: expoBalttour,   alt: "Balttour 2027",                 x: 74, y: 26, rot: -5 },
-                { src: expoOutdoor,    alt: "Outdoor Riga 2027",             x: 2,  y: 56, rot: 4 },
-                { src: expoDarzs,      alt: "Dārzs un dzīvesstils 2027",     x: 74, y: 60, rot: -4 },
-                { src: expoMaja,       alt: "Māja 2027",                     x: 20, y: 80, rot: 5 },
-                { src: expoAuto,       alt: "Auto '27",                      x: 52, y: 80, rot: -6 },
+                { src: expoMedbaltica, alt: "Medbaltica '26", x: 8,  y: 6,  rot: -6 },
+                { src: expoRigacomm,   alt: "Riga Comm 2026", x: 46, y: 2,  rot: 4 },
+                { src: expoFurniture,  alt: "Riga Furniture & Interior 2026", x: 80, y: 12, rot: -3 },
+                { src: expoTechindustry, alt: "Tech Industry 2026", x: 2,  y: 44, rot: 5 },
+                { src: expoBalttour,   alt: "Balttour 2027", x: 78, y: 46, rot: -5 },
+                { src: expoOutdoor,    alt: "Outdoor Riga 2027", x: 14, y: 78, rot: 6 },
+                { src: expoMaja,       alt: "Māja 2027", x: 50, y: 84, rot: -4 },
+                { src: expoAuto,       alt: "Auto '27", x: 84, y: 76, rot: 5 },
+                { src: expoDarzs,      alt: "Dārzs un dzīvesstils 2027", x: 38, y: 40, rot: -7 },
               ].map((item, i) => (
                 <img
                   key={i}
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="absolute w-[22%] aspect-[4/3] object-cover rounded-xl shadow-lg border-2 border-card"
+                  className="absolute w-[24%] aspect-[4/3] object-cover rounded-xl shadow-lg border-2 border-card"
                   style={{
                     left: `${item.x}%`,
                     top: `${item.y}%`,
