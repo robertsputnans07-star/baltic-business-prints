@@ -63,15 +63,15 @@ function AboutPage() {
 
               {/* Scattered images, tight around the center without overlapping */}
               {[
-                { src: expoMedbaltica, alt: "Medbaltica '26",                x: 4,  y: 2,  rot: -5 },
-                { src: expoRigacomm,   alt: "Riga Comm 2026",                x: 38, y: 0,  rot: 4 },
-                { src: expoFurniture,  alt: "Riga Furniture & Interior 2026", x: 72, y: 2,  rot: -3 },
-                { src: expoTechindustry, alt: "Tech Industry 2026",          x: 2,  y: 28, rot: 5 },
-                { src: expoBalttour,   alt: "Balttour 2027",                 x: 74, y: 26, rot: -5 },
-                { src: expoOutdoor,    alt: "Outdoor Riga 2027",             x: 2,  y: 56, rot: 4 },
-                { src: expoDarzs,      alt: "Dārzs un dzīvesstils 2027",     x: 74, y: 60, rot: -4 },
-                { src: expoMaja,       alt: "Māja 2027",                     x: 20, y: 80, rot: 5 },
-                { src: expoAuto,       alt: "Auto '27",                      x: 52, y: 80, rot: -6 },
+                { src: expoMedbaltica,   alt: "Medbaltica '26",                 x: 4,  y: 4,  rot: -7 },
+                { src: expoRigacomm,     alt: "Riga Comm 2026",                 x: 38, y: 14, rot: 5 },
+                { src: expoFurniture,    alt: "Riga Furniture & Interior 2026", x: 72, y: 4,  rot: -3 },
+                { src: expoTechindustry, alt: "Tech Industry 2026",             x: 10, y: 30, rot: 6 },
+                { src: expoBalttour,     alt: "Balttour 2027",                  x: 68, y: 28, rot: -5 },
+                { src: expoOutdoor,      alt: "Outdoor Riga 2027",              x: 10, y: 54, rot: 4 },
+                { src: expoDarzs,        alt: "Dārzs un dzīvesstils 2027",      x: 68, y: 56, rot: -6 },
+                { src: expoMaja,         alt: "Māja 2027",                      x: 28, y: 72, rot: 5 },
+                { src: expoAuto,         alt: "Auto '27",                       x: 52, y: 74, rot: -4 },
               ].map((item, i) => (
                 <img
                   key={i}
