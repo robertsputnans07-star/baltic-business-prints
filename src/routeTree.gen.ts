@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PiedavajumsRouteImport } from './routes/piedavajums'
 import { Route as ParMumsRouteImport } from './routes/par-mums'
 import { Route as KontaktiRouteImport } from './routes/kontakti'
 import { Route as AtsauksmesRouteImport } from './routes/atsauksmes'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PiedavajumsRoute = PiedavajumsRouteImport.update({
+  id: '/piedavajums',
+  path: '/piedavajums',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParMumsRoute = ParMumsRouteImport.update({
   id: '/par-mums',
   path: '/par-mums',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums': typeof PiedavajumsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums': typeof PiedavajumsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,20 @@ export interface FileRoutesById {
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums': typeof PiedavajumsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
+  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/par-mums' | '/piedavajums'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
-  id: '__root__' | '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
+  to: '/' | '/atsauksmes' | '/kontakti' | '/par-mums' | '/piedavajums'
+  id:
+    | '__root__'
+    | '/'
+    | '/atsauksmes'
+    | '/kontakti'
+    | '/par-mums'
+    | '/piedavajums'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +82,18 @@ export interface RootRouteChildren {
   AtsauksmesRoute: typeof AtsauksmesRoute
   KontaktiRoute: typeof KontaktiRoute
   ParMumsRoute: typeof ParMumsRoute
+  PiedavajumsRoute: typeof PiedavajumsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/piedavajums': {
+      id: '/piedavajums'
+      path: '/piedavajums'
+      fullPath: '/piedavajums'
+      preLoaderRoute: typeof PiedavajumsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/par-mums': {
       id: '/par-mums'
       path: '/par-mums'
@@ -107,6 +130,7 @@ const rootRouteChildren: RootRouteChildren = {
   AtsauksmesRoute: AtsauksmesRoute,
   KontaktiRoute: KontaktiRoute,
   ParMumsRoute: ParMumsRoute,
+  PiedavajumsRoute: PiedavajumsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
