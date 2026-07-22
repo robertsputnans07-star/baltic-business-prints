@@ -92,7 +92,7 @@ function AboutPage() {
       </section>
 
       <section className="container-page pb-20">
-        <h2 className="text-2xl md:text-3xl mb-10">Kā mēs strādājam — no idejas līdz rezultātam</h2>
+        <h2 className="text-2xl md:text-3xl mb-10">Kā top jūsu personalizētais risinājums</h2>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <div key={s.title} className="relative rounded-2xl bg-card border border-border/60 p-6">
