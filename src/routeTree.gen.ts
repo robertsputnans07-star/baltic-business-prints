@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ParMumsRouteImport } from './routes/par-mums'
-import { Route as PakalpojumiRouteImport } from './routes/pakalpojumi'
 import { Route as KontaktiRouteImport } from './routes/kontakti'
 import { Route as AtsauksmesRouteImport } from './routes/atsauksmes'
 import { Route as IndexRouteImport } from './routes/index'
@@ -18,11 +17,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const ParMumsRoute = ParMumsRouteImport.update({
   id: '/par-mums',
   path: '/par-mums',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PakalpojumiRoute = PakalpojumiRouteImport.update({
-  id: '/pakalpojumi',
-  path: '/pakalpojumi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktiRoute = KontaktiRouteImport.update({
@@ -45,14 +39,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
 }
 export interface FileRoutesById {
@@ -60,28 +52,20 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
+  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
-  id:
-    | '__root__'
-    | '/'
-    | '/atsauksmes'
-    | '/kontakti'
-    | '/pakalpojumi'
-    | '/par-mums'
+  to: '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
+  id: '__root__' | '/' | '/atsauksmes' | '/kontakti' | '/par-mums'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AtsauksmesRoute: typeof AtsauksmesRoute
   KontaktiRoute: typeof KontaktiRoute
-  PakalpojumiRoute: typeof PakalpojumiRoute
   ParMumsRoute: typeof ParMumsRoute
 }
 
@@ -92,13 +76,6 @@ declare module '@tanstack/react-router' {
       path: '/par-mums'
       fullPath: '/par-mums'
       preLoaderRoute: typeof ParMumsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pakalpojumi': {
-      id: '/pakalpojumi'
-      path: '/pakalpojumi'
-      fullPath: '/pakalpojumi'
-      preLoaderRoute: typeof PakalpojumiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakti': {
@@ -129,19 +106,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AtsauksmesRoute: AtsauksmesRoute,
   KontaktiRoute: KontaktiRoute,
-  PakalpojumiRoute: PakalpojumiRoute,
   ParMumsRoute: ParMumsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
