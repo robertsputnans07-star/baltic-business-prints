@@ -1,53 +1,56 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Handshake, Wallet } from "lucide-react";
+import { ArrowRight, Clock, Award, BadgeEuro, ShieldCheck } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
-import pensImg from "@/assets/product-pens.jpg";
-import bagImg from "@/assets/product-bag.jpg";
-import bottlesImg from "@/assets/product-bottles.jpg";
-import otherImg from "@/assets/product-other.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Drukveratika — Apdrukātas dāvanas uzņēmumiem" },
-      { name: "description", content: "Kvalitatīvas korporatīvas dāvanas ar Jūsu logo Baltijas uzņēmumiem." },
+      { title: "Drukveratika — Sasniedz mērķus savā izstādē" },
+      { name: "description", content: "Personalizēti korporatīvo dāvanu risinājumi, kas palīdz Baltijas uzņēmumiem sasniegt izstādes mērķus." },
     ],
   }),
   component: Index,
 });
 
-const products = [
-  { title: "Pildspalvas", img: pensImg },
-  { title: "Maisiņi", img: bagImg },
-  { title: "Pudeles", img: bottlesImg },
-  { title: "Un daudz kas cits", img: otherImg },
+const features = [
+  { icon: Clock, title: "Ietaupiet laiku", desc: "Pārbaudīta pieeja, pielāgots risinājums" },
+  { icon: Award, title: "Augstākā vērtība", desc: "augstākā atdeve no katras dāvanas" },
+  { icon: BadgeEuro, title: "Godīga cena", desc: "viss iekļauts, bez slēptām izmaksām" },
+  { icon: ShieldCheck, title: "Pilns serviss", desc: "no idejas līdz piegādei" },
 ];
 
 function Index() {
   return (
     <>
-      {/* Hero */}
-      <section className="container-page pt-12 pb-20 md:pt-20 md:pb-28">
+      <section className="container-page pt-12 pb-16 md:pt-20 md:pb-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Korporatīvo dāvanu risinājumi uzņēmumiem,{" "}
-              <span style={{ color: "var(--primary)" }}>kas palīdz izcelties.</span>
+              <span style={{ color: "var(--primary)" }}>Sasniedz</span> mērķus savā izstādē
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-md">
-              Kvalitatīvas dāvanas{" "}
-              <span style={{ color: "var(--primary)" }}>ar Jūsu logo</span>, kas stiprina
-              zīmolu, iepriecina klientus un motivē darbiniekus.
+            <p className="mt-6 text-lg text-muted-foreground max-w-lg">
+              Balstoties uz tirgus izpēti, Drukveratika ir izveidojusi{" "}
+              <span style={{ color: "var(--primary)" }}>izstādes stratēģijas pamatprincipus</span>,
+              lai izstrādātu personalizētus korporatīvo dāvanu risinājumus atbilstoši jūsu izstādes
+              mērķiem. Aizpildi aptauju — mēs izveidosim{" "}
+              <span style={{ color: "var(--primary)" }}>piemērotāko risinājumu</span> tieši jūsu izstādei!
             </p>
-            <div className="mt-10 flex items-start gap-3 text-sm text-muted-foreground max-w-sm">
-              <Handshake className="text-[color:var(--primary)] shrink-0 mt-0.5" size={28} />
-              <span>Izdevīgi ilgtermiņa sadarbības risinājumi uzņēmumiem.</span>
+            <div className="mt-10">
+              <Link
+                to="/kontakti"
+                className="inline-flex items-center gap-3 rounded-full bg-[color:var(--primary)] px-6 py-4 text-[color:var(--primary-foreground)] font-semibold shadow-lg hover:opacity-95 transition"
+              >
+                <span className="h-9 w-9 rounded-full border-2 border-[color:var(--primary-foreground)] flex items-center justify-center">
+                  <ArrowRight size={18} />
+                </span>
+                Saņemt personalizētu risinājumu
+              </Link>
             </div>
           </div>
-          <div className="relative">
+          <div>
             <img
               src={heroImg}
-              alt="Apdrukāti korporatīvie dāvanu piemēri ar Jūsu logo"
+              alt="Personalizētas korporatīvās dāvanas ar Drukveratika logo"
               width={1280}
               height={1024}
               className="rounded-2xl w-full h-auto object-cover shadow-xl"
@@ -56,43 +59,17 @@ function Index() {
         </div>
       </section>
 
-      {/* Products */}
-      <section className="container-page py-12">
-        <h2 className="text-3xl md:text-4xl text-center mb-10">Populārākie produktu piemēri</h2>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((p) => (
-            <div
-              key={p.title}
-              className="rounded-2xl bg-card border border-border/60 p-5"
-            >
-              <h3 className="text-lg font-semibold mb-3 text-center">{p.title}</h3>
-              <div className="relative aspect-square overflow-hidden rounded-xl bg-[color:var(--muted)]">
-                <img src={p.img} alt={p.title} width={640} height={640} loading="lazy"
-                  className="h-full w-full object-cover" />
+      <section className="container-page pb-20 md:pb-28">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((f) => (
+            <div key={f.title} className="flex flex-col items-start">
+              <div className="h-14 w-14 rounded-2xl bg-[color:var(--primary-soft)] flex items-center justify-center mb-4">
+                <f.icon className="text-[color:var(--primary)]" size={26} />
               </div>
+              <h3 className="text-lg font-semibold">{f.title}</h3>
+              <p className="mt-2 text-muted-foreground">{f.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Pricing CTA */}
-      <section className="container-page py-12">
-        <div className="rounded-2xl bg-[color:var(--primary-soft)] p-8 md:p-10 grid gap-6 md:grid-cols-[auto_1fr_auto] md:items-center">
-          <div className="h-16 w-16 rounded-full bg-background flex items-center justify-center">
-            <Wallet className="text-[color:var(--primary)]" size={28} />
-          </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl">
-              Cenas pielāgotas{" "}
-              <span style={{ color: "var(--primary)" }}>jūsu vajadzībām.</span>
-            </h3>
-            <p className="mt-2 text-muted-foreground max-w-2xl">
-              Cenas atkarīgas no apjoma un prasībām. Piedāvājam izdevīgus nosacījumus
-              un elastīgus risinājumus katram uzņēmumam. Visu piedāvājumu un cenas
-              sūtām atsevišķi.
-            </p>
-          </div>
-          <Link to="/kontakti" className="btn-primary whitespace-nowrap">Sazināties ar mums</Link>
         </div>
       </section>
     </>
