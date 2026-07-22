@@ -5,7 +5,7 @@ export const Route = createFileRoute("/atsauksmes")({
   head: () => ({
     meta: [
       { title: "Atsauksmes — Drukveratika" },
-      { name: "description", content: "Ko par mūsu darbu saka Baltijas uzņēmumi un mūsu klienti." },
+      { name: "description", content: "Ko par mūsu personalizētajiem risinājumiem saka Baltijas uzņēmumi." },
     ],
   }),
   component: ReviewsPage,
@@ -13,15 +13,15 @@ export const Route = createFileRoute("/atsauksmes")({
 
 const reviews = [
   {
-    text: "Drukveratika sagatavoja izcilas dāvanas mūsu klientiem izstādei Rīgā. Kvalitāte un piegāde laikā — bez nevienas piezīmes.",
+    text: "Liels paldies Drukveratikas komandai par ieguldīto darbu! Sākumā plānojām vienkārši pasūtīt korporatīvās dāvanas, taču jūsu pieeja pilnībā mainīja mūsu skatījumu. Aptauja palīdzēja saprast mūsu izstādes mērķus, un saņemtais risinājums bija daudz pārdomātāks, nekā paši būtu spējuši izveidot.",
     name: "SIA C****",
   },
   {
-    text: "Apdrukātās krūzes un blociņi ar mūsu logo ir kļuvušas par neatņemamu sastāvdaļu darbinieku ikdienā. Iesakām!",
+    text: "Paldies par operatīvo komunikāciju un profesionālo pieeju! Visa sadarbība bija vienkārša un pārskatāma. Mēs aizpildījām aptauju, pārējo paveica Drukveratika. Saņēmām kvalitatīvus produktus, skaidru komunikāciju un savlaicīgu piegādi.",
     name: "SIA K****",
   },
   {
-    text: "Operatīva komunikācija un elastīga pieeja. Saņēmām individuālu piedāvājumu, kas precīzi atbilda mūsu budžetam.",
+    text: "Esam ļoti apmierināti ar sadarbību! Patika, ka katram ieteikumam bija skaidrs pamatojums. Nebija sajūtas, ka vienkārši izvēlamies produktus no kataloga – viss risinājums bija pārdomāts un pielāgots mūsu izstādes mērķiem.",
     name: "SIA A****",
   },
 ];

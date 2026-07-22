@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 const links = [
   { to: "/", label: "Sākums" },
   { to: "/par-mums", label: "Par mums" },
-  { to: "/pakalpojumi", label: "Pakalpojumi" },
+  { to: "/piedavajums", label: "Piedāvājums" },
   { to: "/atsauksmes", label: "Atsauksmes" },
   { to: "/kontakti", label: "Kontakti" },
 ] as const;
@@ -27,7 +27,6 @@ export function SiteHeader() {
                 className:
                   "text-[color:var(--primary)] underline underline-offset-8 decoration-2",
               }}
-              activeOptions={{ exact: true }}
             >
               {l.label}
             </Link>

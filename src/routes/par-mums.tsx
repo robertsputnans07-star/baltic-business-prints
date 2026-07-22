@@ -21,10 +21,10 @@ export const Route = createFileRoute("/par-mums")({
 });
 
 const steps = [
-  { icon: Lightbulb, title: "Ideja", desc: "Kopā ar Jums izstrādājam koncepciju, kas atspoguļo Jūsu zīmolu." },
-  { icon: Pencil, title: "Piedāvājums", desc: "Sagatavojam vizuālu piedāvājumu un pielāgojam to budžetam." },
-  { icon: Package, title: "Maketi", desc: "Izveidojam apdrukas maketus apstiprināšanai pirms ražošanas." },
-  { icon: Truck, title: "Ražošana un piegāde", desc: "Kvalitatīva apdruka un savlaicīga piegāde visā Baltijā." },
+  { icon: Lightbulb, title: "Aptauja", desc: "Aizpildi īsu aptauju par savu uzņēmumu, izstādes mērķiem un budžetu." },
+  { icon: Pencil, title: "Personalizēta stratēģija", desc: "Balstoties uz aptaujas rezultātiem, izstrādājam piemērotāko korporatīvo dāvanu risinājumu tieši tavai izstādei." },
+  { icon: Package, title: "Saskaņošana", desc: "Pielāgojam produktus, daudzumus, dizainu un budžetu, līdz risinājums pilnībā atbilst jūsu vajadzībām." },
+  { icon: Truck, title: "Ražošana un piegāde", desc: "Nodrošinām kvalitatīvu apdruku, ražošanu un savlaicīgu piegādi visā Baltijā." },
 ];
 
 function AboutPage() {
@@ -35,18 +35,18 @@ function AboutPage() {
           <div className="max-w-xl">
             <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Par mums</span>
             <h1 className="mt-3 text-4xl md:text-5xl leading-tight">
-              Korporatīvas dāvanas Baltijas uzņēmumiem
+              Personalizēti korporatīvo dāvanu risinājumi Baltijas uzņēmumiem
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              <strong>Drukveratika</strong> specializējas kvalitatīvu korporatīvo dāvanu
-              izstrādē un sagatavošanā Baltijas uzņēmumiem. Mēs nodrošinām pilnu servisu —
-              no dizaina izstrādes un apdrukas līdz gatavam risinājumam izstādēm,
-              pasākumiem un ikdienas reprezentācijai.
+              <strong>Drukveratika</strong> palīdz Baltijas uzņēmumiem sasniegt izstāžu mērķus,
+              izstrādājot personalizētus korporatīvo dāvanu risinājumus. Balstoties uz tirgus
+              izpēti un izstādes stratēģijas pamatprincipiem, mēs izvēlamies piemērotākos
+              produktus, daudzumu un pieeju katra uzņēmuma vajadzībām.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Mūsu mērķis ir radīt korporatīvās dāvanas, kas stiprina uzņēmuma tēlu,
-              atstāj profesionālu iespaidu un palīdz veidot spēcīgākas attiecības ar
-              klientiem, partneriem un darbiniekiem.
+              No dizaina izstrādes un apdrukas līdz gatavam risinājumam — mēs nodrošinām visu
+              procesu, lai korporatīvās dāvanas kļūtu par efektīvu instrumentu klientu piesaistei,
+              zīmola atpazīstamībai un sadarbības stiprināšanai.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ function AboutPage() {
       </section>
 
       <section className="container-page pb-20">
-        <h2 className="text-2xl md:text-3xl mb-10">Kā mēs strādājam — no idejas līdz rezultātam</h2>
+        <h2 className="text-2xl md:text-3xl mb-10">Kā top jūsu personalizētais risinājums</h2>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <div key={s.title} className="relative rounded-2xl bg-card border border-border/60 p-6">

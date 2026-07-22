@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
+import { SurveyForm } from "@/components/SurveyForm";
 
 export const Route = createFileRoute("/kontakti")({
   head: () => ({
     meta: [
-      { title: "Kontakti — Drukveratika" },
-      { name: "description", content: "Sazinies ar Drukveratika komandu — e-pasts un tālrunis." },
+      { title: "Aizpildi anketu — Drukveratika" },
+      { name: "description", content: "Aizpildi aptauju un saņem personalizētu korporatīvo dāvanu risinājumu savai izstādei." },
     ],
   }),
   component: ContactPage,
@@ -15,12 +15,13 @@ export const Route = createFileRoute("/kontakti")({
 function ContactPage() {
   return (
     <section className="container-page py-16 md:py-24">
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid gap-12 md:grid-cols-[1fr_1.4fr]">
         <div>
-          <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Kontakti</span>
-          <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Sazinies ar mums</h1>
+          <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Aptauja</span>
+          <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi anketu!</h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Atstāj ziņu vai raksti tieši uz e-pastu — atbildam darba dienās 24h laikā.
+            Balstoties uz saņemto informāciju, izveidosim personalizētu korporatīvo dāvanu
+            risinājumu un ieteiksim piemērotāko realizācijas stratēģiju tieši jūsu izstādei.
           </p>
 
           <ul className="mt-10 space-y-5">
@@ -55,8 +56,7 @@ function ContactPage() {
         </div>
 
         <div className="rounded-2xl bg-card border border-border/60 p-7 md:p-9">
-          <h2 className="text-xl font-semibold mb-5">Atstāj ziņu</h2>
-          <ContactForm />
+          <SurveyForm />
         </div>
       </div>
     </section>

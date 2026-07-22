@@ -9,20 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PiedavajumsRouteImport } from './routes/piedavajums'
 import { Route as ParMumsRouteImport } from './routes/par-mums'
-import { Route as PakalpojumiRouteImport } from './routes/pakalpojumi'
 import { Route as KontaktiRouteImport } from './routes/kontakti'
 import { Route as AtsauksmesRouteImport } from './routes/atsauksmes'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PiedavajumsIndexRouteImport } from './routes/piedavajums.index'
+import { Route as PiedavajumsSadarbibaRouteImport } from './routes/piedavajums.sadarbiba'
+import { Route as PiedavajumsKlientuPiesaisteRouteImport } from './routes/piedavajums.klientu-piesaiste'
+import { Route as PiedavajumsAtpazistamibaRouteImport } from './routes/piedavajums.atpazistamiba'
 
+const PiedavajumsRoute = PiedavajumsRouteImport.update({
+  id: '/piedavajums',
+  path: '/piedavajums',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParMumsRoute = ParMumsRouteImport.update({
   id: '/par-mums',
   path: '/par-mums',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PakalpojumiRoute = PakalpojumiRouteImport.update({
-  id: '/pakalpojumi',
-  path: '/pakalpojumi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktiRoute = KontaktiRouteImport.update({
@@ -40,65 +44,119 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PiedavajumsIndexRoute = PiedavajumsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PiedavajumsRoute,
+} as any)
+const PiedavajumsSadarbibaRoute = PiedavajumsSadarbibaRouteImport.update({
+  id: '/sadarbiba',
+  path: '/sadarbiba',
+  getParentRoute: () => PiedavajumsRoute,
+} as any)
+const PiedavajumsKlientuPiesaisteRoute =
+  PiedavajumsKlientuPiesaisteRouteImport.update({
+    id: '/klientu-piesaiste',
+    path: '/klientu-piesaiste',
+    getParentRoute: () => PiedavajumsRoute,
+  } as any)
+const PiedavajumsAtpazistamibaRoute =
+  PiedavajumsAtpazistamibaRouteImport.update({
+    id: '/atpazistamiba',
+    path: '/atpazistamiba',
+    getParentRoute: () => PiedavajumsRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums': typeof PiedavajumsRouteWithChildren
+  '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
+  '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
+  '/piedavajums/': typeof PiedavajumsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
+  '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
+  '/piedavajums': typeof PiedavajumsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/atsauksmes': typeof AtsauksmesRoute
   '/kontakti': typeof KontaktiRoute
-  '/pakalpojumi': typeof PakalpojumiRoute
   '/par-mums': typeof ParMumsRoute
+  '/piedavajums': typeof PiedavajumsRouteWithChildren
+  '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
+  '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
+  '/piedavajums/': typeof PiedavajumsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
+  fullPaths:
+    | '/'
+    | '/atsauksmes'
+    | '/kontakti'
+    | '/par-mums'
+    | '/piedavajums'
+    | '/piedavajums/atpazistamiba'
+    | '/piedavajums/klientu-piesaiste'
+    | '/piedavajums/sadarbiba'
+    | '/piedavajums/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atsauksmes' | '/kontakti' | '/pakalpojumi' | '/par-mums'
+  to:
+    | '/'
+    | '/atsauksmes'
+    | '/kontakti'
+    | '/par-mums'
+    | '/piedavajums/atpazistamiba'
+    | '/piedavajums/klientu-piesaiste'
+    | '/piedavajums/sadarbiba'
+    | '/piedavajums'
   id:
     | '__root__'
     | '/'
     | '/atsauksmes'
     | '/kontakti'
-    | '/pakalpojumi'
     | '/par-mums'
+    | '/piedavajums'
+    | '/piedavajums/atpazistamiba'
+    | '/piedavajums/klientu-piesaiste'
+    | '/piedavajums/sadarbiba'
+    | '/piedavajums/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AtsauksmesRoute: typeof AtsauksmesRoute
   KontaktiRoute: typeof KontaktiRoute
-  PakalpojumiRoute: typeof PakalpojumiRoute
   ParMumsRoute: typeof ParMumsRoute
+  PiedavajumsRoute: typeof PiedavajumsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/piedavajums': {
+      id: '/piedavajums'
+      path: '/piedavajums'
+      fullPath: '/piedavajums'
+      preLoaderRoute: typeof PiedavajumsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/par-mums': {
       id: '/par-mums'
       path: '/par-mums'
       fullPath: '/par-mums'
       preLoaderRoute: typeof ParMumsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pakalpojumi': {
-      id: '/pakalpojumi'
-      path: '/pakalpojumi'
-      fullPath: '/pakalpojumi'
-      preLoaderRoute: typeof PakalpojumiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakti': {
@@ -122,26 +180,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/piedavajums/': {
+      id: '/piedavajums/'
+      path: '/'
+      fullPath: '/piedavajums/'
+      preLoaderRoute: typeof PiedavajumsIndexRouteImport
+      parentRoute: typeof PiedavajumsRoute
+    }
+    '/piedavajums/sadarbiba': {
+      id: '/piedavajums/sadarbiba'
+      path: '/sadarbiba'
+      fullPath: '/piedavajums/sadarbiba'
+      preLoaderRoute: typeof PiedavajumsSadarbibaRouteImport
+      parentRoute: typeof PiedavajumsRoute
+    }
+    '/piedavajums/klientu-piesaiste': {
+      id: '/piedavajums/klientu-piesaiste'
+      path: '/klientu-piesaiste'
+      fullPath: '/piedavajums/klientu-piesaiste'
+      preLoaderRoute: typeof PiedavajumsKlientuPiesaisteRouteImport
+      parentRoute: typeof PiedavajumsRoute
+    }
+    '/piedavajums/atpazistamiba': {
+      id: '/piedavajums/atpazistamiba'
+      path: '/atpazistamiba'
+      fullPath: '/piedavajums/atpazistamiba'
+      preLoaderRoute: typeof PiedavajumsAtpazistamibaRouteImport
+      parentRoute: typeof PiedavajumsRoute
+    }
   }
 }
+
+interface PiedavajumsRouteChildren {
+  PiedavajumsAtpazistamibaRoute: typeof PiedavajumsAtpazistamibaRoute
+  PiedavajumsKlientuPiesaisteRoute: typeof PiedavajumsKlientuPiesaisteRoute
+  PiedavajumsSadarbibaRoute: typeof PiedavajumsSadarbibaRoute
+  PiedavajumsIndexRoute: typeof PiedavajumsIndexRoute
+}
+
+const PiedavajumsRouteChildren: PiedavajumsRouteChildren = {
+  PiedavajumsAtpazistamibaRoute: PiedavajumsAtpazistamibaRoute,
+  PiedavajumsKlientuPiesaisteRoute: PiedavajumsKlientuPiesaisteRoute,
+  PiedavajumsSadarbibaRoute: PiedavajumsSadarbibaRoute,
+  PiedavajumsIndexRoute: PiedavajumsIndexRoute,
+}
+
+const PiedavajumsRouteWithChildren = PiedavajumsRoute._addFileChildren(
+  PiedavajumsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AtsauksmesRoute: AtsauksmesRoute,
   KontaktiRoute: KontaktiRoute,
-  PakalpojumiRoute: PakalpojumiRoute,
   ParMumsRoute: ParMumsRoute,
+  PiedavajumsRoute: PiedavajumsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
