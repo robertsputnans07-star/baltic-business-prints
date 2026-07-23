@@ -19,16 +19,16 @@ function Page() {
         to="/piedavajums"
         className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--primary)] hover:underline mb-8"
       >
-        <ArrowLeft size={16} /> Atpakaļ uz piedāvājumu
+        <ArrowLeft size={16} /> Atpakaļ
       </Link>
       <h1 className="text-3xl md:text-4xl mb-10">Sadarbības stiprināšanas sākuma risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
-          <div className="grid grid-cols-[160px_1fr] items-center gap-5">
+          <div className="flex flex-col gap-4 max-w-md">
             <div className="rounded-2xl overflow-hidden aspect-square bg-[color:var(--primary-soft)]">
               <img src={mugImg.url} alt="dāvanu komplekti" className="h-full w-full object-cover" />
             </div>
-            <div className="text-lg font-semibold">dāvanu komplekti — 15 gab.</div>
+            <div className="text-lg font-semibold text-center">dāvanu komplekti — 15 gab.</div>
           </div>
           <p className="mt-8 text-muted-foreground">Iekļauta personalizācija un drukas sagatavošana.</p>
         </div>
