@@ -9,8 +9,7 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Palīdzam uzņēmumiem veidot paliekošas attiecības ar klientiem un darbiniekiem,
-            piedāvājot kvalitatīvas apdrukātas dāvanas.
+            Personalizēti korporatīvo dāvanu risinājumi katras izstādes mērķiem.
           </p>
         </div>
 
