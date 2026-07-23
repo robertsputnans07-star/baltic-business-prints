@@ -18,7 +18,7 @@ function ContactPage() {
       <div className="grid gap-12 md:grid-cols-[1fr_1.4fr]">
         <div>
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Aptauja</span>
-          <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi anketu!</h1>
+          <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi aptauju!</h1>
           <p className="mt-6 text-lg text-muted-foreground">
             Balstoties uz saņemto informāciju, izveidosim personalizētu korporatīvo dāvanu
             risinājumu un ieteiksim piemērotāko realizācijas stratēģiju tieši jūsu izstādei.

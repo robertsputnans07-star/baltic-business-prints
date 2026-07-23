@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-import otherImg from "@/assets/product-other.jpg";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import mugImg from "@/assets/sub-mug.png.asset.json";
 
 export const Route = createFileRoute("/piedavajums/sadarbiba")({
   head: () => ({
@@ -15,12 +15,18 @@ export const Route = createFileRoute("/piedavajums/sadarbiba")({
 function Page() {
   return (
     <section className="container-page py-16 md:py-24">
+      <Link
+        to="/piedavajums"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--primary)] hover:underline mb-8"
+      >
+        <ArrowLeft size={16} /> Atpakaļ uz piedāvājumu
+      </Link>
       <h1 className="text-3xl md:text-4xl mb-10">Sadarbības stiprināšanas sākuma risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
-          <div className="grid grid-cols-[220px_1fr] items-center gap-5">
+          <div className="grid grid-cols-[160px_1fr] items-center gap-5">
             <div className="rounded-2xl overflow-hidden aspect-square bg-[color:var(--primary-soft)]">
-              <img src={otherImg} alt="dāvanu komplekti" className="h-full w-full object-cover" />
+              <img src={mugImg.url} alt="dāvanu komplekti" className="h-full w-full object-cover" />
             </div>
             <div className="text-lg font-semibold">dāvanu komplekti — 15 gab.</div>
           </div>

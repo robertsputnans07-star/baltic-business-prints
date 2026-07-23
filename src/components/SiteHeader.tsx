@@ -33,9 +33,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link to="/kontakti" className="btn-primary hidden md:inline-flex">
-          Sazināties
-        </Link>
+        <div className="hidden md:block" />
       </div>
     </header>
   );

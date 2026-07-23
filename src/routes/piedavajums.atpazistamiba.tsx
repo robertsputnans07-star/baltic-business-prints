@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-import pensImg from "@/assets/product-pens.jpg";
-import otherImg from "@/assets/product-other.jpg";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import whitePenImg from "@/assets/sub-whitepen.jpg.asset.json";
+import keychainImg from "@/assets/sub-keychain.jpg.asset.json";
 
 export const Route = createFileRoute("/piedavajums/atpazistamiba")({
   head: () => ({
@@ -14,25 +14,41 @@ export const Route = createFileRoute("/piedavajums/atpazistamiba")({
 });
 
 const items = [
-  { img: pensImg, label: "pildspalvas — 510 gab." },
-  { img: otherImg, label: "piekariņi — 110 gab." },
+  { img: whitePenImg.url, label: "pildspalvas", qty: "510 gab." },
+  { img: keychainImg.url, label: "piekariņi", qty: "110 gab." },
 ];
 
 function Page() {
   return (
     <section className="container-page py-16 md:py-24">
+      <Link
+        to="/piedavajums"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--primary)] hover:underline mb-8"
+      >
+        <ArrowLeft size={16} /> Atpakaļ uz piedāvājumu
+      </Link>
       <h1 className="text-3xl md:text-4xl mb-10">Atpazīstamības sākuma risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
-          <div className="space-y-6">
-            {items.map((it) => (
-              <div key={it.label} className="grid grid-cols-[160px_1fr] items-center gap-5">
+          <div className="space-y-8">
+            {items.map((it, i) => {
+              const imageFirst = i % 2 === 0;
+              const image = (
                 <div className="rounded-2xl overflow-hidden aspect-square bg-[color:var(--primary-soft)]">
                   <img src={it.img} alt={it.label} className="h-full w-full object-cover" />
                 </div>
-                <div className="text-lg font-semibold">{it.label}</div>
-              </div>
-            ))}
+              );
+              const text = (
+                <div className="text-lg font-semibold">
+                  {it.label} — {it.qty}
+                </div>
+              );
+              return (
+                <div key={it.label} className="grid grid-cols-[160px_1fr] items-center gap-5">
+                  {imageFirst ? (<>{image}{text}</>) : (<>{text}{image}</>)}
+                </div>
+              );
+            })}
           </div>
           <p className="mt-8 text-muted-foreground">Iekļauta personalizācija un drukas sagatavošana.</p>
         </div>
