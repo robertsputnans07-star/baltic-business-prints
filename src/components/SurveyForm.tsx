@@ -28,7 +28,6 @@ const questions: Question[] = [
       "Modernu un inovatīvu",
       "Videi draudzīgu un ilgtspējīgu",
     ],
-    multi: true,
   },
   {
     id: "q3",
