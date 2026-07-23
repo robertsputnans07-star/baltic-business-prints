@@ -32,9 +32,6 @@ function ReviewsPage() {
       <div className="max-w-3xl">
         <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Atsauksmes</span>
         <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Ko saka mūsu klienti</h1>
-        <p className="mt-6 text-lg text-muted-foreground">
-          Mēs lepojamies ar ilgtermiņa sadarbību un godīgām atsauksmēm.
-        </p>
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
