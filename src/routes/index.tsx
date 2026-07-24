@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, Award, BadgeEuro, ShieldCheck } from "lucide-react";
-import heroImg from "@/assets/hero-products.jpg";
+import heroAsset from "@/assets/hero-products.png.asset.json";
+const heroImg = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
