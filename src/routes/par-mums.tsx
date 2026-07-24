@@ -56,7 +56,7 @@ function AboutPage() {
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[34%] aspect-square">
                 <div className="bg-[color:var(--primary)] text-[color:var(--primary-foreground)] rounded-2xl shadow-xl w-full h-full flex items-center justify-center px-2 py-2 text-center">
                   <p className="text-[13px] md:text-[15px] font-bold leading-tight">
-                    Izstādes, kurās jau esam palīdzējuši uzņēmumiem
+                    Izstādes, kurās jau esam palīdzējuši un turpinām palīdzēt uzņēmumiem
                   </p>
                 </div>
               </div>
