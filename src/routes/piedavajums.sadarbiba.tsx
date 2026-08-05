@@ -5,7 +5,7 @@ import mugImg from "@/assets/sub-mug.png.asset.json";
 export const Route = createFileRoute("/piedavajums/sadarbiba")({
   head: () => ({
     meta: [
-      { title: "Sadarbības stiprināšanas sākuma risinājums — Drukveratika" },
+      { title: "Sadarbības stiprināšanas pamata risinājums — Drukveratika" },
       { name: "description", content: "Kvalitatīvas dāvanas nozīmīgu klientu un partneru attiecību stiprināšanai." },
     ],
   }),
@@ -21,7 +21,7 @@ function Page() {
       >
         <ArrowLeft size={16} /> Atpakaļ
       </Link>
-      <h1 className="text-3xl md:text-4xl mb-10">Sadarbības stiprināšanas sākuma risinājums</h1>
+      <h1 className="text-3xl md:text-4xl mb-10">Sadarbības stiprināšanas pamata risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <div className="flex flex-col gap-4 max-w-md">
@@ -37,7 +37,7 @@ function Page() {
             Kāpēc šī stratēģija strādā?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Šis sākuma risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
+            Šis pamata risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
             <span style={{ color: "var(--primary)" }}>stiprināt attiecības ar nozīmīgiem klientiem, sadarbības partneriem un komandu</span>.
             Stratēģijas pamatā ir kvalitatīvas un pārdomāti noformētas dāvanas, kas izceļ uzņēmuma
             attieksmi, pateicību un vēlmi veidot ilgtermiņa sadarbību. Šāda pieeja palīdz radīt

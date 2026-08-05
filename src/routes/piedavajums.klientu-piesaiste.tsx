@@ -7,7 +7,7 @@ import bagImg from "@/assets/sub-bag.png.asset.json";
 export const Route = createFileRoute("/piedavajums/klientu-piesaiste")({
   head: () => ({
     meta: [
-      { title: "Klientu piesaistes sākuma risinājums — Drukveratika" },
+      { title: "Klientu piesaistes pamata risinājums — Drukveratika" },
       { name: "description", content: "Personalizētas korporatīvās dāvanas jaunu klientu piesaistei izstādēs." },
     ],
   }),
@@ -29,7 +29,7 @@ function Page() {
       >
         <ArrowLeft size={16} /> Atpakaļ
       </Link>
-      <h1 className="text-3xl md:text-4xl mb-10">Klientu piesaistes sākuma risinājums</h1>
+      <h1 className="text-3xl md:text-4xl mb-10">Klientu piesaistes pamata risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -51,7 +51,7 @@ function Page() {
             Kāpēc šī stratēģija strādā?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Šis sākuma risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
+            Šis pamata risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
             <span style={{ color: "var(--primary)" }}>piesaistīt jaunus klientus un veidot kvalitatīvus kontaktus</span>.
             Stratēģijas pamatā ir personalizētas korporatīvās dāvanas, kas ne tikai nes uzņēmuma
             logo, bet arī vizuāli un konceptuāli atspoguļo pašu uzņēmumu. Dāvanas tiek pasniegtas

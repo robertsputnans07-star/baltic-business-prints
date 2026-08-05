@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Personalizēti korporatīvo dāvanu risinājumi katras izstādes mērķiem.
+            Personalizēti korporatīvo dāvanu risinājumi katras izstādes mērķu sasniegšanai.
           </p>
         </div>
 

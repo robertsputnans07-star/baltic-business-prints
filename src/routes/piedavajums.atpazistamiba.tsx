@@ -6,7 +6,7 @@ import keychainImg from "@/assets/sub-keychain.jpg.asset.json";
 export const Route = createFileRoute("/piedavajums/atpazistamiba")({
   head: () => ({
     meta: [
-      { title: "Atpazīstamības sākuma risinājums — Drukveratika" },
+      { title: "Atpazīstamības pamata risinājums — Drukveratika" },
       { name: "description", content: "Zīmola atpazīstamības risinājums plašai auditorijai izstādē." },
     ],
   }),
@@ -27,7 +27,7 @@ function Page() {
       >
         <ArrowLeft size={16} /> Atpakaļ
       </Link>
-      <h1 className="text-3xl md:text-4xl mb-10">Atpazīstamības sākuma risinājums</h1>
+      <h1 className="text-3xl md:text-4xl mb-10">Atpazīstamības pamata risinājums</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -49,7 +49,7 @@ function Page() {
             Kāpēc šī stratēģija strādā?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Šis sākuma risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
+            Šis pamata risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
             <span style={{ color: "var(--primary)" }}>palielināt zīmola atpazīstamību un sasniegt pēc iespējas plašāku auditoriju</span>.
             Stratēģijas pamatā ir efektīva dāvanu izplatīšana, nodrošinot, ka uzņēmuma zīmols nonāk
             pie liela skaita izstādes apmeklētāju. Šī pieeja ļauj sasniegt plašu auditoriju ar
