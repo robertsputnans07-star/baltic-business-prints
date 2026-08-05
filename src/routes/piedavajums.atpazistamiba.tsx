@@ -27,7 +27,7 @@ function Page() {
       >
         <ArrowLeft size={16} /> Atpakaļ
       </Link>
-      <h1 className="text-3xl md:text-4xl mb-10">Atpazīstamības pamata risinājums</h1>
+      <h1 className="text-3xl md:text-4xl mb-10">Atpazīstamības pamata risinājums (piemērs)</h1>
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <div className="grid gap-6 sm:grid-cols-2">
