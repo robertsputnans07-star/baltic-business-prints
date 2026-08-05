@@ -12,9 +12,8 @@ const questions: Question[] = [
     id: "q1",
     label: "1. Kāds ir jūsu galvenais mērķis šajā izstādē?",
     options: [
+      "Kvalitatīvu kontaktu iegūšana",
       "Piesaistīt pēc iespējas vairāk uzmanības uzņēmumam",
-      "Iegūt pēc iespējas vairāk jaunu kontaktu",
-      "Atrast mazāk, bet kvalitatīvākus potenciālos klientus",
       "Stiprināt attiecības ar esošajiem klientiem un partneriem",
       "Prezentēt jaunu produktu vai pakalpojumu",
     ],

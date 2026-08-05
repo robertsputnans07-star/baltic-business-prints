@@ -20,8 +20,8 @@ function ContactPage() {
           <span className="text-sm font-semibold uppercase tracking-wider text-[color:var(--primary)]">Aptauja</span>
           <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi aptauju!</h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Balstoties uz saņemto informāciju, izveidosim personalizētu korporatīvo dāvanu
-            risinājumu un ieteiksim piemērotāko realizācijas stratēģiju tieši jūsu izstādei.
+            Balstoties uz saņemto informāciju, izvērtēsim Jūsu izstādes mērķus un vajadzības, lai
+            sagatavotu piemērotāko korporatīvo dāvanu pieeju tieši Jūsu uzņēmumam.
           </p>
 
           <ul className="mt-10 space-y-5">
