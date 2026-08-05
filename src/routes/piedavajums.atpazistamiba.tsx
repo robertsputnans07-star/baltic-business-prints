@@ -56,6 +56,9 @@ function Page() {
             pārdomātu budžetu un veidot ilgstošu zīmola klātbūtni arī pēc izstādes.
           </p>
           <div className="mt-8 rounded-2xl bg-[color:var(--primary-soft)] p-6">
+            <p className="mb-4 text-sm font-semibold" style={{ color: "var(--primary)" }}>
+              Augšā redzamais pamata risinājums ir tikai piemērs, izveido savu risinājumu!
+            </p>
             <Link
               to="/kontakti"
               className="inline-flex items-center gap-3 rounded-full bg-[color:var(--primary)] px-5 py-3 text-[color:var(--primary-foreground)] font-semibold"
@@ -66,8 +69,7 @@ function Page() {
               Saņemt personalizētu risinājumu
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Izstādes mērķi, auditorija un budžets katram uzņēmumam ir atšķirīgi. Tāpēc
-              personalizēts risinājums vienmēr nodrošina precīzāku pieeju nekā gatavs sākuma variants.
+              Katram risinājumam izveidojam arī realizācijas stratēģiju.
             </p>
           </div>
         </div>
