@@ -15,7 +15,6 @@ const questions: Question[] = [
       "Kvalitatīvu kontaktu iegūšana",
       "Piesaistīt pēc iespējas vairāk uzmanības uzņēmumam",
       "Stiprināt attiecības ar esošajiem klientiem un partneriem",
-      "Prezentēt konkrētu produktu vai pakalpojumu",
     ],
   },
   {
