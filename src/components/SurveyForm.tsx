@@ -39,7 +39,14 @@ const questions: Question[] = [
   {
     id: "q4",
     label: "4. Cik apmeklētāju plānojat uzrunāt izstādes laikā?",
-    options: ["Līdz 300", "300–1 000", "Vairāk nekā 1 000", "Vēl neesam noteikuši"],
+    options: [
+      "Līdz 500",
+      "Līdz 1 000",
+      "Līdz 1 500",
+      "Līdz 2 500",
+      "Vairāk nekā 2 500",
+      "Vēl neesam noteikuši",
+    ],
   },
   {
     id: "q5",
