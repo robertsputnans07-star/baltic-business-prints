@@ -13,8 +13,8 @@ const questions: Question[] = [
     label: "1. Kāds ir jūsu galvenais mērķis šajā izstādē?",
     options: [
       "Kvalitatīvu kontaktu iegūšana",
-      "Piesaistīt pēc iespējas vairāk uzmanības uzņēmumam",
-      "Stiprināt attiecības ar esošajiem klientiem un partneriem",
+      "Uzņēmuma atpazīstamības palielināšana",
+      "Esošo klientu un partneru attiecību stiprināšana",
     ],
   },
   {
@@ -29,36 +29,20 @@ const questions: Question[] = [
   },
   {
     id: "q3",
-    label: "3. Kā plānojat izsniegt korporatīvās dāvanas?",
+    label:
+      "3. Vai nepieciešamas īpašas dāvanas nozīmīgiem klientiem, partneriem vai komandas locekļiem?",
     options: [
-      "Vienādas dāvanas visiem apmeklētājiem",
-      "Atšķirīgas dāvanas dažādām apmeklētāju grupām",
-      "Vēlamies, lai jūs iesakāt piemērotāko pieeju",
+      "Jā, vēlamies īpašas dāvanas nozīmīgākajiem cilvēkiem",
+      "Nē, šoreiz tās nav nepieciešamas",
     ],
   },
   {
     id: "q4",
-    label: "4. Cik apmeklētāju plānojat uzrunāt izstādes laikā?",
+    label: "4. Kā plānojat investēt šajā izstādē?",
     options: [
-      "Līdz 500",
-      "Līdz 1 000",
-      "Līdz 1 500",
-      "Līdz 2 500",
-      "Vairāk nekā 2 500",
-      "Vēl neesam noteikuši",
-    ],
-  },
-  {
-    id: "q5",
-    label: "5. Kāds ir plānotais budžets korporatīvajām dāvanām?",
-    options: ["Līdz 1 000 €", "1 000–3 000 €", "3 000–7 000 €", "Vairāk nekā 7 000 €"],
-  },
-  {
-    id: "q6",
-    label: "6. Vai izstādē plānojat prezentēt konkrētu produktu vai pakalpojumu?",
-    options: [
-      "Jā, vēlamies piesaistīt uzmanību konkrētam produktam vai pakalpojumam",
-      "Nē, galvenais mērķis ir uzņēmuma atpazīstamība un kontaktu veidošana",
+      "Vēlamies saglabāt izmaksas pēc iespējas zemākas",
+      "Vēlamies optimālu līdzsvaru starp izmaksām un rezultātu",
+      "Esam gatavi investēt vairāk, lai sasniegtu labāku rezultātu",
     ],
   },
 ];

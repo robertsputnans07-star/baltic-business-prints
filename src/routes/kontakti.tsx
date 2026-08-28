@@ -31,16 +31,7 @@ function ContactPage() {
               </span>
               <div>
                 <div className="text-sm text-muted-foreground">Roberts</div>
-                <a href="tel:+37126779996" className="font-semibold">+371 26 779 996</a>
-              </div>
-            </li>
-            <li className="flex items-center gap-4">
-              <span className="h-12 w-12 rounded-full bg-[color:var(--primary-soft)] flex items-center justify-center">
-                <Phone className="text-[color:var(--primary)]" size={20} />
-              </span>
-              <div>
-                <div className="text-sm text-muted-foreground">Ričards</div>
-                <a href="tel:+37128777710" className="font-semibold">+371 28 777 710</a>
+                <a href="tel:+37126259226" className="font-semibold">+371 26 259 226</a>
               </div>
             </li>
             <li className="flex items-center gap-4">
