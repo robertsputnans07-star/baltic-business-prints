@@ -21,7 +21,7 @@ function ContactPage() {
           <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi aptauju!</h1>
           <p className="mt-6 text-lg text-muted-foreground">
             Balstoties uz saņemto informāciju, izvērtēsim Jūsu izstādes mērķus un vajadzības, lai
-            sagatavotu piemērotāko korporatīvo dāvanu pieeju tieši Jūsu uzņēmumam.
+            sagatavotu Jūsu uzņēmumam pielāgotu risinājuma piedāvājumu.
           </p>
 
           <ul className="mt-10 space-y-5">
