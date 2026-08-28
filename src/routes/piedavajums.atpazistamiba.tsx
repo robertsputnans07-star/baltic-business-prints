@@ -42,23 +42,26 @@ function Page() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-muted-foreground">Iekļauta personalizācija un drukas sagatavošana.</p>
         </div>
         <div>
-          <h2 className="text-xl font-semibold" style={{ color: "var(--primary)" }}>
-            Kāpēc šī stratēģija strādā?
-          </h2>
+          <p className="text-muted-foreground">
+            Ja Jūsu izstādes galvenais mērķis ir palielināt uzņēmuma atpazīstamību, korporatīvās
+            dāvanas kļūst daudz nozīmīgākas par vienkāršu uzņēmuma reklāmas materiālu — tās kļūst
+            par instrumentu, kas palīdz piesaistīt uzmanību, palielināt zīmola redzamību un palikt
+            cilvēku atmiņā.
+          </p>
           <p className="mt-4 text-muted-foreground">
-            Šis pamata risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
-            <span style={{ color: "var(--primary)" }}>palielināt zīmola atpazīstamību un sasniegt pēc iespējas plašāku auditoriju</span>.
-            Stratēģijas pamatā ir efektīva dāvanu izplatīšana, nodrošinot, ka uzņēmuma zīmols nonāk
-            pie liela skaita izstādes apmeklētāju. Šī pieeja ļauj sasniegt plašu auditoriju ar
-            pārdomātu budžetu un veidot ilgstošu zīmola klātbūtni arī pēc izstādes.
+            Lai korporatīvās dāvanas patiešām palīdzētu sasniegt šo mērķi, nepieciešams pārdomāts
+            risinājums, kurā ietilpst izstādes stratēģija, atbilstoši izstādei aprēķināti dāvanu
+            daudzumi un proporcijas, piemērota dāvanu izvēle, personalizācija, dizains un skaidra
+            realizācijas kārtība.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            Mēs izveidosim šo risinājumu atbilstoši Jūsu izstādei, uzņēmumam un konkrētajai
+            situācijai, lai tas būtu efektīvs, palīdzētu vadīt izstādi un palielināt uzņēmuma
+            atpazīstamību pēc izstādes.
           </p>
           <div className="mt-8 rounded-2xl bg-[color:var(--primary-soft)] p-6">
-            <p className="mb-4 text-sm font-semibold" style={{ color: "var(--primary)" }}>
-              Augšā redzamais pamata risinājums ir tikai piemērs, izveido savu risinājumu!
-            </p>
             <Link
               to="/kontakti"
               className="inline-flex items-center gap-3 rounded-full bg-[color:var(--primary)] px-5 py-3 text-[color:var(--primary-foreground)] font-semibold"
@@ -68,9 +71,6 @@ function Page() {
               </span>
               Saņemt personalizētu risinājumu
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Katram risinājumam izveidojam arī realizācijas stratēģiju.
-            </p>
           </div>
         </div>
       </div>

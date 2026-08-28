@@ -21,7 +21,7 @@ function ContactPage() {
           <h1 className="mt-3 text-4xl md:text-5xl leading-tight">Aizpildi aptauju!</h1>
           <p className="mt-6 text-lg text-muted-foreground">
             Balstoties uz saņemto informāciju, izvērtēsim Jūsu izstādes mērķus un vajadzības, lai
-            sagatavotu piemērotāko korporatīvo dāvanu pieeju tieši Jūsu uzņēmumam.
+            sagatavotu Jūsu uzņēmumam pielāgotu risinājuma piedāvājumu.
           </p>
 
           <ul className="mt-10 space-y-5">
@@ -31,16 +31,7 @@ function ContactPage() {
               </span>
               <div>
                 <div className="text-sm text-muted-foreground">Roberts</div>
-                <a href="tel:+37126779996" className="font-semibold">+371 26 779 996</a>
-              </div>
-            </li>
-            <li className="flex items-center gap-4">
-              <span className="h-12 w-12 rounded-full bg-[color:var(--primary-soft)] flex items-center justify-center">
-                <Phone className="text-[color:var(--primary)]" size={20} />
-              </span>
-              <div>
-                <div className="text-sm text-muted-foreground">Ričards</div>
-                <a href="tel:+37128777710" className="font-semibold">+371 28 777 710</a>
+                <a href="tel:+37126259226" className="font-semibold">+371 26 259 226</a>
               </div>
             </li>
             <li className="flex items-center gap-4">

@@ -15,9 +15,9 @@ export const Route = createFileRoute("/piedavajums/")({
 });
 
 const cards = [
-  { to: "/piedavajums/klientu-piesaiste", title: "GŪSTI KLIENTUS", price: "no ~ 899€", img: img1.url },
-  { to: "/piedavajums/atpazistamiba", title: "PARĀDI SEVI VISIEM", price: "no ~ 399€", img: img2.url },
-  { to: "/piedavajums/sadarbiba", title: "STIPRINI SADARBĪBU", price: "no ~ 299€", img: img3.url },
+  { to: "/piedavajums/klientu-piesaiste", title: "GŪSTI KLIENTUS", price: "no ~ 1290€ + PVN", img: img1.url },
+  { to: "/piedavajums/atpazistamiba", title: "PARĀDI SEVI VISIEM", price: "no ~ 1490€ + PVN", img: img2.url },
+  { to: "/piedavajums/sadarbiba", title: "STIPRINI SADARBĪBU", price: "no ~ 190€ + PVN", img: img3.url },
 ] as const;
 
 function PiedavajumsIndex() {
@@ -31,7 +31,7 @@ function PiedavajumsIndex() {
         <p className="mt-6 text-lg text-muted-foreground">
           Katrai izstādei ir savs mērķis — piesaistīt jaunus klientus, palielināt atpazīstamību
           vai stiprināt esošās attiecības. Tāpēc esam izveidojuši trīs izstādes stratēģijas
-          pamatprincipus, kurus kombinējot izstrādājam piemērotāko risinājumu katram uzņēmumam.
+          pamatprincipus, kurus izmantojam katras izstādes mērķa sasniegšanā.
         </p>
       </div>
 

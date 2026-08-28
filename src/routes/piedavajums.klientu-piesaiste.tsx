@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import penboxImg from "@/assets/sub-penbox.jpg.asset.json";
 import bottleImg from "@/assets/sub-bottle.png.asset.json";
-import bagImg from "@/assets/sub-bag.png.asset.json";
 
 export const Route = createFileRoute("/piedavajums/klientu-piesaiste")({
   head: () => ({
@@ -15,9 +14,8 @@ export const Route = createFileRoute("/piedavajums/klientu-piesaiste")({
 });
 
 const items = [
-  { img: penboxImg.url, label: "pildspalvas + kartiņa", qty: "510 gab." },
-  { img: bottleImg.url, label: "pudeles", qty: "40 gab." },
-  { img: bagImg.url, label: "maisiņi", qty: "40 gab." },
+  { img: penboxImg.url, label: "pildspalvas + kartiņa", qty: "850 gab." },
+  { img: bottleImg.url, label: "pudeles", qty: "255 gab." },
 ];
 
 function Page() {
@@ -44,23 +42,26 @@ function Page() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-muted-foreground">Iekļauta personalizācija un drukas sagatavošana.</p>
         </div>
         <div>
-          <h2 className="text-xl font-semibold" style={{ color: "var(--primary)" }}>
-            Kāpēc šī stratēģija strādā?
-          </h2>
+          <p className="text-muted-foreground">
+            Ja Jūsu izstādes galvenais mērķis ir iegūt kvalitatīvus kontaktus, korporatīvās dāvanas
+            kļūst daudz nozīmīgākas par vienkāršu uzņēmuma reklāmas materiālu — tās kļūst par
+            instrumentu, kas palīdz piesaistīt īstos cilvēkus, veidot vērtīgas sarunas un virzīt tās
+            pretī potenciālai sadarbībai.
+          </p>
           <p className="mt-4 text-muted-foreground">
-            Šis pamata risinājums ir veidots uzņēmumiem, kuru galvenais izstādes mērķis ir{" "}
-            <span style={{ color: "var(--primary)" }}>piesaistīt jaunus klientus un veidot kvalitatīvus kontaktus</span>.
-            Stratēģijas pamatā ir personalizētas korporatīvās dāvanas, kas ne tikai nes uzņēmuma
-            logo, bet arī vizuāli un konceptuāli atspoguļo pašu uzņēmumu. Dāvanas tiek pasniegtas
-            pēc sarunas, palielinot iespēju, ka katrs kontakts kļūs par potenciālu sadarbību.
+            Lai korporatīvās dāvanas patiešām palīdzētu sasniegt šo mērķi, nepieciešams pārdomāts
+            risinājums, kurā ietilpst izstādes stratēģija, atbilstoši izstādei aprēķināti dāvanu
+            daudzumi un proporcijas, piemērota dāvanu izvēle, personalizācija, dizains un skaidra
+            realizācijas kārtība.
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            Mēs izveidosim šo risinājumu atbilstoši Jūsu izstādei, uzņēmumam un konkrētajai
+            situācijai, lai tas būtu efektīvs, palīdzētu vadīt izstādi un nodrošinātu kvalitatīvus
+            kontaktus turpmākai komunikācijai.
           </p>
           <div className="mt-8 rounded-2xl bg-[color:var(--primary-soft)] p-6">
-            <p className="mb-4 text-sm font-semibold" style={{ color: "var(--primary)" }}>
-              Augšā redzamais pamata risinājums ir tikai piemērs, izveido savu risinājumu!
-            </p>
             <Link
               to="/kontakti"
               className="inline-flex items-center gap-3 rounded-full bg-[color:var(--primary)] px-5 py-3 text-[color:var(--primary-foreground)] font-semibold"
@@ -70,9 +71,6 @@ function Page() {
               </span>
               Saņemt personalizētu risinājumu
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Katram risinājumam izveidojam arī realizācijas stratēģiju.
-            </p>
           </div>
         </div>
       </div>
