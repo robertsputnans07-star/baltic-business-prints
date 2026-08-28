@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import penboxImg from "@/assets/sub-penbox.jpg.asset.json";
 import bottleImg from "@/assets/sub-bottle.png.asset.json";
-import bagImg from "@/assets/sub-bag.png.asset.json";
 
 export const Route = createFileRoute("/piedavajums/klientu-piesaiste")({
   head: () => ({
