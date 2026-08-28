@@ -21,10 +21,10 @@ export const Route = createFileRoute("/par-mums")({
 });
 
 const steps = [
-  { icon: Lightbulb, title: "Aptauja", desc: "Aizpildi īsu aptauju par savu uzņēmumu, izstādes mērķiem un budžetu." },
-  { icon: Pencil, title: "Personalizēta stratēģija", desc: "Balstoties uz aptaujas rezultātiem, izstrādājam piemērotāko korporatīvo dāvanu risinājumu tieši tavai izstādei." },
-  { icon: Package, title: "Saskaņošana", desc: "Pielāgojam produktus, daudzumus, dizainu un budžetu, līdz risinājums pilnībā atbilst jūsu vajadzībām." },
-  { icon: Truck, title: "Ražošana un piegāde", desc: "Nodrošinām kvalitatīvu apdruku, ražošanu un savlaicīgu piegādi visā Baltijā." },
+  { icon: Lightbulb, title: "Aptauja", desc: "Aizpildi īsu aptauju par savu uzņēmumu un izstādes mērķiem." },
+  { icon: Pencil, title: "Piedāvājums", desc: "Saņemiet personalizētu piedāvājumu ar piemērotākajiem produktiem, aprēķinātajiem daudzumiem un cenu." },
+  { icon: Package, title: "Gatavs risinājums", desc: "Saņemiet realizācijas stratēģiju un norādījumus, kā ar izvēlētajām dāvanām vadīt izstādi un sasniegt savu mērķi." },
+  { icon: Truck, title: "Piegāde", desc: "Nodrošinām kvalitatīvu apdruku, ražošanu un savlaicīgu piegādi visā Baltijā." },
 ];
 
 function AboutPage() {

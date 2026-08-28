@@ -17,10 +17,7 @@ export function SiteFooter() {
           <h3 className="text-base font-semibold mb-4">Kontakti</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3">
-              <Phone size={16} className="text-[color:var(--primary)]" /> Roberts — +371 26 779 996
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone size={16} className="text-[color:var(--primary)]" /> Ričards — +371 28 777 710
+              <Phone size={16} className="text-[color:var(--primary)]" /> Roberts — +371 26 259 226
             </li>
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-[color:var(--primary)]" /> info.drukveratika@gmail.com
