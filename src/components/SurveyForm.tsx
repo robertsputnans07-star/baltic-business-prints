@@ -111,7 +111,7 @@ export function SurveyForm() {
       ))}
 
       <div>
-        <label className="font-semibold block mb-2">7. Uzņēmuma nosaukums</label>
+        <label className="font-semibold block mb-2">5. Jūsu uzņēmuma nosaukums</label>
         <input
           required
           type="text"
@@ -122,7 +122,7 @@ export function SurveyForm() {
 
       <div>
         <label className="font-semibold block mb-2">
-          8. E-pasts, uz kuru nosūtīt personalizēto risinājumu un tālāko informāciju
+          6. E-pasts, uz kuru nosūtīt Jūsu personalizēto risinājuma piedāvājumu
         </label>
         <input
           required
