@@ -14,9 +14,8 @@ export const Route = createFileRoute("/piedavajums/klientu-piesaiste")({
 });
 
 const items = [
-  { img: penboxImg.url, label: "pildspalvas + kartiņa", qty: "510 gab." },
-  { img: bottleImg.url, label: "pudeles", qty: "40 gab." },
-  { img: bagImg.url, label: "maisiņi", qty: "40 gab." },
+  { img: penboxImg.url, label: "pildspalvas + kartiņa", qty: "850 gab." },
+  { img: bottleImg.url, label: "pudeles", qty: "255 gab." },
 ];
 
 function Page() {
