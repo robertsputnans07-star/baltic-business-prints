@@ -74,34 +74,34 @@ function PiedavajumsIndex() {
       <div className="mt-16 h-px w-full" style={{ backgroundColor: "var(--primary)" }} />
 
       {/* Otrais piedāvājums */}
-      <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
+      <div className="mt-16 grid gap-8 lg:grid-cols-12 lg:items-center">
         <Link
           to="/piedavajums/davanu-risinajums"
-          className="group rounded-3xl border-2 border-[color:var(--primary)] bg-card p-4 flex flex-col hover:shadow-xl transition"
+          className="group rounded-3xl border-2 border-[color:var(--primary)] bg-card p-5 flex flex-col hover:shadow-xl transition lg:col-span-5"
         >
           <div className="rounded-2xl bg-[color:var(--primary)] text-[color:var(--primary-foreground)] text-center font-bold py-3 px-2">
             PALIEC ATMIŅĀ
           </div>
           <div className="text-center my-5 text-2xl font-semibold">no ~ 990€ + PVN</div>
-          <div className="rounded-2xl overflow-hidden aspect-square mx-auto w-[90%] bg-[color:var(--muted)]">
+          <div className="rounded-2xl overflow-hidden aspect-[4/3] w-full bg-[color:var(--muted)]">
             <img src={penImg.url} alt="Pildspalva ar kartiņu" className="h-full w-full object-cover" />
           </div>
-          <div className="mt-auto pt-5">
-            <span className="mx-auto flex items-center justify-center gap-2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] px-5 py-2 text-sm font-medium">
+          <div className="mt-6 flex justify-center">
+            <span className="flex items-center justify-center gap-2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] px-6 py-2.5 text-sm font-medium">
               Uzzināt vairāk <ArrowRight size={14} />
             </span>
           </div>
         </Link>
-        <div className="sm:col-span-1 lg:col-span-3 lg:self-center">
+        <div className="lg:col-span-7">
           <h2 className="text-3xl md:text-4xl leading-tight" style={{ color: "var(--primary)" }}>
             Ne katram uzņēmumam ir nepieciešama pilna izstādes stratēģija
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground">
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Dažādās izstādēs uzņēmumiem ir atšķirīgi mērķi, apmeklētāju paradumi un veids, kā
             radīt interesi par savu piedāvājumu. Tāpēc ne vienmēr nepieciešama pilna stratēģiskā
             pieeja, lai dāvanas radītu vērtību.
           </p>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             Šādos gadījumos piedāvājam vienkāršotu dāvanu risinājumu, kas palīdz papildināt
             uzņēmuma dalību izstādē un palikt apmeklētāja atmiņā arī pēc tās.
           </p>
