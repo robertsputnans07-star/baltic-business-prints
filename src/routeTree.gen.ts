@@ -17,6 +17,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PiedavajumsIndexRouteImport } from './routes/piedavajums.index'
 import { Route as PiedavajumsSadarbibaRouteImport } from './routes/piedavajums.sadarbiba'
 import { Route as PiedavajumsKlientuPiesaisteRouteImport } from './routes/piedavajums.klientu-piesaiste'
+import { Route as PiedavajumsDavanuRisinajumsRouteImport } from './routes/piedavajums.davanu-risinajums'
 import { Route as PiedavajumsAtpazistamibaRouteImport } from './routes/piedavajums.atpazistamiba'
 
 const PiedavajumsRoute = PiedavajumsRouteImport.update({
@@ -60,6 +61,12 @@ const PiedavajumsKlientuPiesaisteRoute =
     path: '/klientu-piesaiste',
     getParentRoute: () => PiedavajumsRoute,
   } as any)
+const PiedavajumsDavanuRisinajumsRoute =
+  PiedavajumsDavanuRisinajumsRouteImport.update({
+    id: '/davanu-risinajums',
+    path: '/davanu-risinajums',
+    getParentRoute: () => PiedavajumsRoute,
+  } as any)
 const PiedavajumsAtpazistamibaRoute =
   PiedavajumsAtpazistamibaRouteImport.update({
     id: '/atpazistamiba',
@@ -74,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/par-mums': typeof ParMumsRoute
   '/piedavajums': typeof PiedavajumsRouteWithChildren
   '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/davanu-risinajums': typeof PiedavajumsDavanuRisinajumsRoute
   '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
   '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
   '/piedavajums/': typeof PiedavajumsIndexRoute
@@ -84,6 +92,7 @@ export interface FileRoutesByTo {
   '/kontakti': typeof KontaktiRoute
   '/par-mums': typeof ParMumsRoute
   '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/davanu-risinajums': typeof PiedavajumsDavanuRisinajumsRoute
   '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
   '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
   '/piedavajums': typeof PiedavajumsIndexRoute
@@ -96,6 +105,7 @@ export interface FileRoutesById {
   '/par-mums': typeof ParMumsRoute
   '/piedavajums': typeof PiedavajumsRouteWithChildren
   '/piedavajums/atpazistamiba': typeof PiedavajumsAtpazistamibaRoute
+  '/piedavajums/davanu-risinajums': typeof PiedavajumsDavanuRisinajumsRoute
   '/piedavajums/klientu-piesaiste': typeof PiedavajumsKlientuPiesaisteRoute
   '/piedavajums/sadarbiba': typeof PiedavajumsSadarbibaRoute
   '/piedavajums/': typeof PiedavajumsIndexRoute
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/par-mums'
     | '/piedavajums'
     | '/piedavajums/atpazistamiba'
+    | '/piedavajums/davanu-risinajums'
     | '/piedavajums/klientu-piesaiste'
     | '/piedavajums/sadarbiba'
     | '/piedavajums/'
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/kontakti'
     | '/par-mums'
     | '/piedavajums/atpazistamiba'
+    | '/piedavajums/davanu-risinajums'
     | '/piedavajums/klientu-piesaiste'
     | '/piedavajums/sadarbiba'
     | '/piedavajums'
@@ -130,6 +142,7 @@ export interface FileRouteTypes {
     | '/par-mums'
     | '/piedavajums'
     | '/piedavajums/atpazistamiba'
+    | '/piedavajums/davanu-risinajums'
     | '/piedavajums/klientu-piesaiste'
     | '/piedavajums/sadarbiba'
     | '/piedavajums/'
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PiedavajumsKlientuPiesaisteRouteImport
       parentRoute: typeof PiedavajumsRoute
     }
+    '/piedavajums/davanu-risinajums': {
+      id: '/piedavajums/davanu-risinajums'
+      path: '/davanu-risinajums'
+      fullPath: '/piedavajums/davanu-risinajums'
+      preLoaderRoute: typeof PiedavajumsDavanuRisinajumsRouteImport
+      parentRoute: typeof PiedavajumsRoute
+    }
     '/piedavajums/atpazistamiba': {
       id: '/piedavajums/atpazistamiba'
       path: '/atpazistamiba'
@@ -213,6 +233,7 @@ declare module '@tanstack/react-router' {
 
 interface PiedavajumsRouteChildren {
   PiedavajumsAtpazistamibaRoute: typeof PiedavajumsAtpazistamibaRoute
+  PiedavajumsDavanuRisinajumsRoute: typeof PiedavajumsDavanuRisinajumsRoute
   PiedavajumsKlientuPiesaisteRoute: typeof PiedavajumsKlientuPiesaisteRoute
   PiedavajumsSadarbibaRoute: typeof PiedavajumsSadarbibaRoute
   PiedavajumsIndexRoute: typeof PiedavajumsIndexRoute
@@ -220,6 +241,7 @@ interface PiedavajumsRouteChildren {
 
 const PiedavajumsRouteChildren: PiedavajumsRouteChildren = {
   PiedavajumsAtpazistamibaRoute: PiedavajumsAtpazistamibaRoute,
+  PiedavajumsDavanuRisinajumsRoute: PiedavajumsDavanuRisinajumsRoute,
   PiedavajumsKlientuPiesaisteRoute: PiedavajumsKlientuPiesaisteRoute,
   PiedavajumsSadarbibaRoute: PiedavajumsSadarbibaRoute,
   PiedavajumsIndexRoute: PiedavajumsIndexRoute,
