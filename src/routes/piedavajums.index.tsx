@@ -74,27 +74,25 @@ function PiedavajumsIndex() {
       <div className="mt-16 h-px w-full" style={{ backgroundColor: "var(--primary)" }} />
 
       {/* Otrais piedāvājums */}
-      <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
-        <div className="max-w-sm">
-          <Link
-            to="/piedavajums/davanu-risinajums"
-            className="group rounded-3xl border-2 border-[color:var(--primary)] bg-card p-4 flex flex-col hover:shadow-xl transition"
-          >
-            <div className="rounded-2xl bg-[color:var(--primary)] text-[color:var(--primary-foreground)] text-center font-bold py-3 px-2">
-              PALIEC ATMIŅĀ
-            </div>
-            <div className="text-center my-5 text-2xl font-semibold">no ~ 990€ + PVN</div>
-            <div className="rounded-2xl overflow-hidden aspect-square mx-auto w-[90%] bg-[color:var(--muted)]">
-              <img src={penImg.url} alt="Pildspalva ar kartiņu" className="h-full w-full object-cover" />
-            </div>
-            <div className="mt-auto pt-5">
-              <span className="mx-auto flex items-center justify-center gap-2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] px-5 py-2 text-sm font-medium">
-                Uzzināt vairāk <ArrowRight size={14} />
-              </span>
-            </div>
-          </Link>
-        </div>
-        <div>
+      <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
+        <Link
+          to="/piedavajums/davanu-risinajums"
+          className="group rounded-3xl border-2 border-[color:var(--primary)] bg-card p-4 flex flex-col hover:shadow-xl transition"
+        >
+          <div className="rounded-2xl bg-[color:var(--primary)] text-[color:var(--primary-foreground)] text-center font-bold py-3 px-2">
+            PALIEC ATMIŅĀ
+          </div>
+          <div className="text-center my-5 text-2xl font-semibold">no ~ 990€ + PVN</div>
+          <div className="rounded-2xl overflow-hidden aspect-square mx-auto w-[90%] bg-[color:var(--muted)]">
+            <img src={penImg.url} alt="Pildspalva ar kartiņu" className="h-full w-full object-cover" />
+          </div>
+          <div className="mt-auto pt-5">
+            <span className="mx-auto flex items-center justify-center gap-2 rounded-full bg-[color:var(--primary)] text-[color:var(--primary-foreground)] px-5 py-2 text-sm font-medium">
+              Uzzināt vairāk <ArrowRight size={14} />
+            </span>
+          </div>
+        </Link>
+        <div className="sm:col-span-1 lg:col-span-3 lg:self-center">
           <h2 className="text-3xl md:text-4xl leading-tight" style={{ color: "var(--primary)" }}>
             Ne katram uzņēmumam ir nepieciešama pilna izstādes stratēģija
           </h2>

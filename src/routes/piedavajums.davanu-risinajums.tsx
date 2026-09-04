@@ -47,7 +47,7 @@ function Page() {
           </p>
           <p className="mt-4 text-muted-foreground">
             Mēs aprēķinām nepieciešamo dāvanu daudzumu, personalizējam pildspalvas, izveidojam
-            kartiņu, kas atspoguļo jūsu uzņēmumu un parūpējamies, lai viss būtu gatavs izmantošanai
+            kartiņas, kas atspoguļo jūsu uzņēmumu un parūpējamies, lai viss būtu gatavs izmantošanai
             izstādē.
           </p>
           <div className="mt-8 rounded-2xl bg-[color:var(--primary-soft)] p-6">
