@@ -71,7 +71,7 @@ function PiedavajumsIndex() {
       </div>
 
       {/* Atdalošā līnija starp pirmo un otro piedāvājumu */}
-      <hr className="mt-16 border-0 border-t border-[color:var(--primary)] opacity-60" />
+      <div className="mt-16 h-px w-full" style={{ backgroundColor: "var(--primary)" }} />
 
       {/* Otrais piedāvājums */}
       <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
